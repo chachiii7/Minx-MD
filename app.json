@@ -1,8 +1,8 @@
 {
-  "name": "CheemsBot-MD",
+  "name": "Minx-MD",
   "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/DGXeon/CheemsBot-MD2",
-  "logo": "https://pbs.twimg.com/media/FO7fojOakAAyYgt?format=jpg&name=900x900",
+  "repository": "https://github.com/iiuzi-0x/Minx-MD",
+  "logo": "https://telegra.ph/file/558c21a243c3e793bfd1c.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
     {
