@@ -1,115 +1,136 @@
-<h1 align="center">ꪶ𝗖𝗵𝗲𝗲𝗺𝘀 𝗕𝗼𝘁-𝗠𝗗 𝗩𝟮ꫂ<br></h1>
 <p align="center">
-  <img src="https://telegra.ph/file/8adfac9d34c43ce444fbf.jpg" width="540" height="300" />
+<img src="https://telegra.ph/file/558c21a243c3e793bfd1c.jpg" alt="nz" width="350"/>
 </p>
 
-<p align="center">
-Cheems Bot Multi Device is a automated whatsapp bot created by <a href="https://github.com/DGXeon" target="_blank">Xeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
-</p>
+## Minx-MD
 
-<p align="center">
-<a href="https://youtu.be/imFIX-Wrt3s"><img title="Size" src="https://img.shields.io/badge/Tutorial-Video-green"></a>
-</p>
+> <a href="https://youtu.be/W-QCp2fWRTo"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://www.youtube.com/c/BOTINDO" /><br>
 
-------
+> [Automated Multi Device whatsapp bot created](https://github.com/nexusNw/Gojo-Satoru) by [nexusNw](github.com/nexusNw)
 
-# ```Bot Info```
-<p align="center">
-<a href="https://github.com/DGXeon/followers"><img title="Followers" src="https://img.shields.io/github/followers/DGXeon?color=red&style=flat-square"></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/DGXeon/CheemsBot-MD2?color=blue&style=flat-square"></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2/network/members"><img title="Forks" src="https://img.shields.io/github/forks/DGXeon/CheemsBot-MD2?color=red&style=flat-square"></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/DGXeon/CheemsBot-MD2?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2"><img title="Open Source" src="https://img.shields.io/badge/Author-Xeon%20Bot%20Inc.-red?v=103"></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2/"><img title="Size" src="https://img.shields.io/github/repo-size/DGXeon/CheemsBot-MD2?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDGXeon%2FCheemsBot-MD2&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/DGXeon/CheemsBot-MD2/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
-</p>
-<p align='center'>
-    </p>
+> Dont forget to give a star bro.🥲 IF Heroku Deploy seems Error, Fork This Repo And Try Deploy Again
 
--------
+> If The Api Of This Bot Run Empty You Can Change it To Your Own Api By Changing [Here](https://github.com/iiuzi-0x/Minx-MD/blob/master/settings.js#L18) And Register [here](https://zenzapis.xyz/) to get apikey
 
-## ```Connect With Me```
-<p align="center">
-<a href="https://wa.me/916909137213"><img src="https://img.shields.io/badge/Contact Xeon-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"><img src="https://img.shields.io/badge/Join Official GC-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A"><img src="https://img.shields.io/badge/Subscribe Xeon-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://www.youtube.com/c/BOTINDO" /><br>
-</p>
 
-## ```Donate Me```
+</br>
 
-- [`FamPay`](https://telegra.ph/file/69933531032d509ff9e54.jpg)
+<a href="https://github.com/iiuzi-0x"><img title="Author" src="https://img.shields.io/badge/Author-iiuzi-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
+<a href="https://github.com/iiuzi-0x/Minx-MD"><img title="Stars" src="https://img.shields.io/github/stars/iiuzi-0x/Minx-MD?color=54aeff&style=flat-square" /></a>
+<a href="https://github.com/iiuzi-0x/Minx-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/iiuzi-0x/Minx-MD?color=54aeff&style=flat-square" /></a>
+<a href="https://github.com/iiuzi-0x/Minx-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/iiuzi-0x/Minx-MD?label=watchers&color=54aeff&style=flat-square" /></a> <br>
 
-<p align="left">
-Scan qr code from the above button, u can pay through GooglePay, Paytm, PhonePe and FamPay.
-</p>
+---
 
-## ```Bot Support Groups```
-
-- [`1st GC`](https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS)
-- [`2nd GC`](https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5)
-
-# Setup For Deployment 👇
-
-## `SETTINGS`
-
-- CHANGE OWNER NUMBER [Here](https://github.com/DGXeon/CheemsBot-MD2/blob/master/config/config.json#L26)
-- CHANGE OWNER NAME [Here](https://github.com/DGXeon/CheemsBot-MD2/blob/master/config/config.json#L37)
-- CHANGE BOT NAME [Here](https://github.com/DGXeon/CheemsBot-MD2/blob/master/config/config.json#L28)
-
-## ` BUILDPACKS`
-
-```
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
-https://github.com/clhuang/heroku-buildpack-webp-binaries.git
-https://github.com/DuckyTeam/heroku-buildpack-imagemagick
-heroku/nodejs
-```
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DGXeon/CheemsBot-MD2/)
-
-# Install Manually 👇
-## `Requirements`
-* [Node.js](https://nodejs.org/en/)
+<!-- Requirements -->
+<b><details><summary>Requirements</summary></b>
+* Some Text Editor
+* [Node JS](https://nodejs.org/en/)
 * [Git](https://git-scm.com/downloads)
-* [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2020-12-08-13-03/ffmpeg-n4.3.1-26-gca55240b8c-win64-gpl-4.3.zip)
-* [Libwebp](https://developers.google.com/speed/webp/download)
-* Any text editor
-## `Clone Repo & Installation dependencies`
+* [FFMPEG](https://ffmpeg.org/download.html)
+  
 ```bash
-git clone https://github.com/DGXeon/CheemsBot-MD2.git
-cd CheemsBot-MD2
-npm start
+Add FFmpeg to PATH environment variable
 ```
-## `For Termux/Ssh/Ubuntu`
+</details>
+
+
+<!-- Start via Heroku -->
+<b><details><summary>Start via Heroku</summary></b>
+
+* Scan QR In Your Whatsapp From [Here](https://replit.com/@iiuzi-0x/Md-Scanner?outputonly=1&lite=1)
+* Fork This Repo By Clicking [Here](https://github.com/iiuzi-0x/Minx-MD/fork)
+* then Deploy The Bot From [Here](https://heroku.com/deploy)
+* Wait 5-10 Min To Deploy 
+* After Deploying On The Worker And Check The Logs
+
+</details>
+
+
+
+<!-- Installation via Termux -->
+<b><details><summary>Installation on Termux</summary></b>
 ```bash
-apt update
-apt upgrade
-pkg update && pkg upgrade
-pkg install bash
-pkg install libwebp
-pkg install git -y
-pkg install nodejs -y 
-pkg install ffmpeg -y 
-pkg install wget
-pkg install imagemagick -y
-git clone https://github.com/DGXeon/CheemsBot-MD2
-cd CheemsBot-MD2
-npm start
+> apt update
+> apt upgrade
+> pkg update && pkg upgrade
+> pkg install bash
+> pkg install libwebp
+> pkg install git -y
+> pkg install nodejs -y 
+> pkg install ffmpeg -y 
+> pkg install wget
+> pkg install imagemagick -y
+> git clone https://github.com/iiuzi-0x/Minx-MD
+> cd Gojo-Satoru
+> npm install
 ```
-## `For VPS`
+</details>
+
+<!-- Edit -->
+<b><details><summary>Edit settings.js</summary></b>
 ```bash
-apt install nodejs 
-apt install git 
-apt apt install ffmpeg 
-apt apt install libwebp 
-apt apt install imagemagick
-apt install bash
-git clone https://github.com/DGXeon/CheemsBot-MD2
-cd CheemsBot-MD2
-npm start
+global.APIKeys = {
+	'https://zenzapis.xyz': 'YOURAPIKEY',
+}
+  
+global.owner = ["9185XXXXXX"]
+global.ownername = ["YourName"]
 ```
-## `For 24/7 Activation`
+</details>
+
+
+<!-- 24hrs-->
+<b><details><summary>For 24 Hours Activation</summary></b>
+
 ```bash
 npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
+
+</details>
+
+----
+
+
+<b><details><summary>Available Features</summary><br>
+	
+| Features |  Availability |
+| :------: |  :----------: |
+|   Convert     |       ✅     |
+|   Database     |       ✅     |
+|   Owner     |       ✅    |
+|   Islami     |       ✅     |
+|   Downloader     |       ✅     |
+|   Webzone     |       ✅[      |
+|   Searching     |       ✅      |
+|   Textpro     |       ✅      |
+|   Ephoto     |       ✅     |
+|   Anime Web     |       ✅      |
+|   Stalker     |       ✅      |
+|   Random Text     |       ✅     |
+|   Random Image     |       ✅     |
+|   Nekos Life     |       ✅      |
+|   More Nsfw     |       ✅      |
+|   Creator     |       ✅      |
+
+</details>
+
+
+----
+
+<!-- Contact Owner -->
+<b><details><summary>Contact</summary></b>
+
+## ```Connect With Me```
+<p align="center">
+<a href="https://wa.me/918590451659"><img src="https://img.shields.io/badge/Contact Nexus-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://youtube.com/channel/UCqoUjPvDdb0kjXNYdvPPpHQ"><img src="https://img.shields.io/badge/Subscribe Nexus-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://www.youtube.com/c/BOTINDO" /><br>
+</p>
+
+</details>
+
+
+</details><hr>
+
+
+License: [MIT](https://github.com/iiuzi-0x/LICENSE)
