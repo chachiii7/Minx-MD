@@ -46,7 +46,7 @@ const primbon = new Primbon()
 
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 
-const iiuzi-0x = require('xfarr-api')
+const { iiuzi } = require('xfarr-api')
 
 
 
@@ -4306,7 +4306,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi-0x.Webtoons(q).then(async data => {
+                iiuzi.Webtoons(q).then(async data => {
 
                     let txt = `*------「 WEBTOONS-SEARCH 」------*\n\n`
 
@@ -4342,7 +4342,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi-0x.Drakor(`${text}`).then(async data => {
+                iiuzi.Drakor(`${text}`).then(async data => {
 
                     let txt = `*-----「 DRAKOR-SEARCH 」-----*\n\n`
 
@@ -4376,7 +4376,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi-0x.Anime(q).then(async data => {
+                iiuzi.Anime(q).then(async data => {
 
                     let txt = `*-------「 ANIME-SEARCH 」-------*\n\n`
 
@@ -4426,7 +4426,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi-0x.Character(q).then(async data => {
+                iiuzi.Character(q).then(async data => {
 
                     let txt = `*---「 CHARACTER-SEARCH 」---*\n\n`
 
@@ -4474,7 +4474,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi-0x.Manga(`${text}`).then(async data => {
+               iiuzi.Manga(`${text}`).then(async data => {
 
                     let txt = `*------「 MANGA-SEARCH 」------*\n\n`
 
