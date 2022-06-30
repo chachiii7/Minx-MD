@@ -1,22 +1,11 @@
 {
   "name": "Minx-MD",
   "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/iiuzi-0x/Minx-MD",
+  "repository": "https://github.com/Anshidj7/Minx-MD",
   "logo": "https://telegra.ph/file/558c21a243c3e793bfd1c.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  "keywords": ["nodejs", "bot", "whatsapp bot", "multi device"],
   "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    }
+ 
   ],
    "formation": {
         "worker": {
