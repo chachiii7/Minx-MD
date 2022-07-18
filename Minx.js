@@ -418,7 +418,7 @@ module.exports = iiuziBotInc = async (iiuziBotInc, m, chatUpdate, store) => {
 
 const reply = (teks) => {
 
-            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx.jpg`),"sourceUrl": "https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5"}}}, { quoted: m})
+            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/EcVIsg2j0UH93Z1sLhTCyW"}}}, { quoted: m})
 
         }
 
@@ -426,7 +426,7 @@ const reply = (teks) => {
 
         const replay = (teks) => {
 
-            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
+            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
 
         }
 
@@ -518,7 +518,7 @@ const reply = (teks) => {
 
         if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
 
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐶`)
+        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐈`)
 
         iiuziBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 
@@ -528,7 +528,7 @@ const reply = (teks) => {
 
 
 
-        //auto reply by iiuzi 🦄
+        //auto reply by iiuzi 🐭
 
         for (let anji of setik){
 
@@ -590,7 +590,7 @@ const reply = (teks) => {
 
         
 
-        //media detect by 🦄iiuzi\\
+        //media detect by 🐭iiuzi\\
 
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 
@@ -2136,7 +2136,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
 
-                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-0x/fungames/main/GuessTheWord.js')
+                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-x0/fungames/main/GuessTheWord.js')
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
@@ -2162,7 +2162,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
 
-                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-0x/fungames/main/GuessTheSentence.js')
+                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-x0/fungames/main/GuessTheSentence.js')
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
@@ -2720,7 +2720,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
           global.author = text.split("|")[1]
 
-          reply(`Exif Has Been Successfully Changed to\n\n🐶 Packname : ${global.packname}\n🐶 Author : ${global.author}`)
+          reply(`Exif Has Been Successfully Changed to\n\n🐈 Packname : ${global.packname}\n🐈 Author : ${global.author}`)
 
             }
 
@@ -2904,7 +2904,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
 
                 for (let mem of participants) {
 
-                teks += `🐶 @${mem.id.split('@')[0]}\n`
+                teks += `🐈 @${mem.id.split('@')[0]}\n`
 
                 }
 
@@ -2944,7 +2944,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
 
                 for (let i of anu) {
 
-                    teks += `🐶 *${i.name}* : ${i.result}\n\n`
+                    teks += `🐈 *${i.name}* : ${i.result}\n\n`
 
                 }
 
@@ -3544,7 +3544,7 @@ break
 
                             }]
 
-                      let txt = `「 Cheems Bot Broadcast 」\n\n${text}`
+                      let txt = `「 Minx Bot Broadcast 」\n\n${text}`
 
                       iiuziBotInc.send5ButImg(i, txt, iiuziBotInc.user.name, global.thumb, btn)
 
@@ -3612,7 +3612,7 @@ break
 
                             }]
 
-                      let txt = `「 Cheems Bot Broadcast 」\n\n${text}`
+                      let txt = `「 Minx Bot Broadcast 」\n\n${text}`
 
                       iiuziBotInc.send5ButImg(yoi, txt, iiuziBotInc.user.name, global.thumb, btn)
 
@@ -3642,9 +3642,9 @@ break
 
                     let waktu = read ? read : unread
 
-                    teks += `🐶 @${i.userJid.split('@')[0]}\n`
+                    teks += `🐈 @${i.userJid.split('@')[0]}\n`
 
-                    teks += ` ┗━🐶 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🐶 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
+                    teks += ` ┗━🐈 *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} 🐈 *Status :* ${read ? 'Read' : 'Sent'}\n\n`
 
                 }
 
@@ -3714,7 +3714,7 @@ break
 
                     let online = [...Object.keys(store.presences[id]), botNumber]
 
-                    iiuziBotInc.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐶 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    iiuziBotInc.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐈 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
 
              }
 
@@ -4060,7 +4060,7 @@ break
 
                 for (let i of search.all) {
 
-                    teks += `🐶 No : ${no++}\n🐶 Type : ${i.type}\n🐶 Video ID : ${i.videoId}\n🐶 Title : ${i.title}\n🐶 Views : ${i.views}\n🐶 Duration : ${i.timestamp}\n🐶 Uploaded On : ${i.ago}\n🐶 Author : ${i.author.name}\n🐶 Url : ${i.url}\n\n─────────────────\n\n`
+                    teks += `🐈 No : ${no++}\n🐈 Type : ${i.type}\n🐈 Video ID : ${i.videoId}\n🐈 Title : ${i.title}\n🐈 Views : ${i.views}\n🐈 Duration : ${i.timestamp}\n🐈 Uploaded On : ${i.ago}\n🐈 Author : ${i.author.name}\n🐈 Url : ${i.url}\n\n─────────────────\n\n`
 
                 }
 
@@ -4082,11 +4082,11 @@ break
 
                 for (let g of res) {
 
-                teks += `🐶 *Title* : ${g.title}\n`
+                teks += `🐈 *Title* : ${g.title}\n`
 
-                teks += `🐶 *Description* : ${g.snippet}\n`
+                teks += `🐈 *Description* : ${g.snippet}\n`
 
-                teks += `🐶 *Link* : ${g.link}\n\n────────────────────────\n\n`
+                teks += `🐈 *Link* : ${g.link}\n\n────────────────────────\n\n`
 
                 } 
 
@@ -4166,25 +4166,25 @@ break
 
                     caption: `
 
-🐶 Title : ${anu.title}
+🐈 Title : ${anu.title}
 
-🐶 Ext : Search
+🐈 Ext : Search
 
-🐶 ID : ${anu.videoId}
+🐈 ID : ${anu.videoId}
 
-🐶 Duration : ${anu.timestamp}
+🐈 Duration : ${anu.timestamp}
 
-🐶 Viewes : ${anu.views}
+🐈 Viewes : ${anu.views}
 
-🐶 Uploaded On : ${anu.ago}
+🐈 Uploaded On : ${anu.ago}
 
-🐶 Author : ${anu.author.name}
+🐈 Author : ${anu.author.name}
 
-🐶 Channel : ${anu.author.url}
+🐈 Channel : ${anu.author.url}
 
-🐶 Description : ${anu.description}
+🐈 Description : ${anu.description}
 
-🐶 Url : ${anu.url}`,
+🐈 Url : ${anu.url}`,
 
                     footer: iiuziBotInc.user.name,
 
@@ -4212,7 +4212,7 @@ break
 
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
+                iiuziBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '320kbps'}`, m)
 
                 iiuziBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 
@@ -4232,7 +4232,7 @@ break
 
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
 
             }
 
@@ -4250,7 +4250,7 @@ break
 
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${urls[text - 1]}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '128kbps'}`, m)
+                iiuziBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '128kbps'}`, m)
 
                 iiuziBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 
@@ -4278,7 +4278,7 @@ break
 
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${urls[text - 1]}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
 
             }
 
@@ -4294,7 +4294,7 @@ break
 
                 result = anu[Math.floor(Math.random() * anu.length)]
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: result }, caption: '🐶 Media Url : '+result }, { quoted: m })
+                iiuziBotInc.sendMessage(m.chat, { image: { url: result }, caption: '🐈 Media Url : '+result }, { quoted: m })
 
             }
 
@@ -4590,7 +4590,7 @@ case 'webtonsearch': case 'webtoon':
 
                     image: { url: result.image[0] },
 
-                    caption: `🐶 Title : ${result.title}\n🐶 Category : ${result.type}\n🐶 Detail : ${result.source}\n🐶 Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
+                    caption: `🐈 Title : ${result.title}\n🐈 Category : ${result.type}\n🐈 Detail : ${result.source}\n🐈 Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
 
                     footer: iiuziBotInc.user.name,
 
@@ -4626,7 +4626,7 @@ case 'webtonsearch': case 'webtoon':
 
                     image: { url: result.image },
 
-                    caption: `🐶 Title : ${result.title}\n🐶 Source : ${result.source}\n🐶 Media Url : ${result.image}`,
+                    caption: `🐈 Title : ${result.title}\n🐈 Source : ${result.source}\n🐈 Media Url : ${result.image}`,
 
                     footer: iiuziBotInc.user.name,
 
@@ -4716,13 +4716,13 @@ case 'webtonsearch': case 'webtoon':
 
 	    case 'nomerhoki': case 'nomorhoki': {
 
-                if (!Number(text)) return reply(`Example : ${prefix + command} 916909137213`)
+                if (!Number(text)) return reply(`Example : ${prefix + command} 918590451659`)
 
                 let anu = await primbon.nomer_hoki(Number(text))
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Phone Number :* ${anu.message.nomer_hp}\n🐶 *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n🐶 *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n🐶 *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Phone Number :* ${anu.message.nomer_hp}\n🐈 *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n🐈 *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n🐈 *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
 
             }
 
@@ -4736,7 +4736,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Dream :* ${anu.message.mimpi}\n🐶 *Meaning :* ${anu.message.arti}\n🐶 *Solution :* ${anu.message.solusi}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Dream :* ${anu.message.mimpi}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Solution :* ${anu.message.solusi}`, m)
 
             }
 
@@ -4752,7 +4752,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Your Name :* ${anu.message.nama_anda.nama}\n🐶 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐶 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐶 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4768,7 +4768,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Your Name :* ${anu.message.nama_anda.nama}\n🐶 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐶 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐶 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4784,7 +4784,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Husband's Name :* ${anu.message.suami.nama}\n🐶 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐶 *Wife's Name :* ${anu.message.istri.nama}\n🐶 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Husband's Name :* ${anu.message.suami.nama}\n🐈 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐈 *Wife's Name :* ${anu.message.istri.nama}\n🐈 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4800,7 +4800,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Your Name :* ${anu.message.nama_anda.nama}\n🐶 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐶 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐶 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐶 *Positive Side :* ${anu.message.sisi_positif}\n🐶 *Negative Side :* ${anu.message.sisi_negatif}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4814,7 +4814,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Meaning :* ${anu.message.arti}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4830,7 +4830,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Life Path :* ${anu.message.life_path}\n🐶 *Destiny :* ${anu.message.destiny}\n🐶 *Destiny Desire :* ${anu.message.destiny_desire}\n🐶 *Personality :* ${anu.message.personality}\n🐶 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Life Path :* ${anu.message.life_path}\n🐈 *Destiny :* ${anu.message.destiny}\n🐈 *Destiny Desire :* ${anu.message.destiny_desire}\n🐈 *Personality :* ${anu.message.personality}\n🐈 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
 
             }
 
@@ -4846,7 +4846,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendImage(m.chat,  anu.message.gambar, `🐶 *Your Name :* ${anu.message.nama_anda}\n🐶 *Couple Name :* ${anu.message.nama_pasangan}\n🐶 *Positive Side :* ${anu.message.sisi_positif}\n🐶 *Negative Side :* ${anu.message.sisi_negatif}`, m)
+                iiuziBotInc.sendImage(m.chat,  anu.message.gambar, `🐈 *Your Name :* ${anu.message.nama_anda}\n🐈 *Couple Name :* ${anu.message.nama_pasangan}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}`, m)
 
             }
 
@@ -4862,7 +4862,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Wedding Date :* ${anu.message.tanggal}\n🐶 *Characteristics :* ${anu.message.karakteristik}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Wedding Date :* ${anu.message.tanggal}\n🐈 *Characteristics :* ${anu.message.karakteristik}`, m)
 
             }
 
@@ -4878,7 +4878,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Born :* ${anu.message.hari_lahir}\n🐶 *Business :* ${anu.message.usaha}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Business :* ${anu.message.usaha}`, m)
 
             }
 
@@ -4894,7 +4894,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Born :* ${anu.message.hari_lahir}\n🐶 *Sustenance :* ${anu.message.rejeki}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Sustenance :* ${anu.message.rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4910,7 +4910,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Born :* ${anu.message.hari_lahir}\n🐶 *Profession :* ${anu.message.pekerjaan}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Profession :* ${anu.message.pekerjaan}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4926,7 +4926,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Analysis :* ${anu.message.analisa}\n🐶 *Root Number :* ${anu.message.angka_akar}\n🐶 *Nature :* ${anu.message.sifat}\n🐶 *Element :* ${anu.message.elemen}\n🐶 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Root Number :* ${anu.message.angka_akar}\n🐈 *Nature :* ${anu.message.sifat}\n🐈 *Element :* ${anu.message.elemen}\n🐈 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
 
             }
 
@@ -4942,7 +4942,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Analysis :* ${anu.message.analisa}\n🐶 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4958,7 +4958,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendImage(m.chat, anu.message.image, `🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐶 *Meaning :* ${anu.message.arti}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendImage(m.chat, anu.message.image, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4974,7 +4974,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Born :* ${anu.message.tahun_lahir}\n🐶 *Gender :* ${anu.message.jenis_kelamin}\n🐶 *Kua Number :* ${anu.message.angka_kua}\n🐶 *Group :* ${anu.message.kelompok}\n🐶 *Character :* ${anu.message.karakter}\n🐶 *Good Sector :* ${anu.message.sektor_baik}\n🐶 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tahun_lahir}\n🐈 *Gender :* ${anu.message.jenis_kelamin}\n🐈 *Kua Number :* ${anu.message.angka_kua}\n🐈 *Group :* ${anu.message.kelompok}\n🐈 *Character :* ${anu.message.karakter}\n🐈 *Good Sector :* ${anu.message.sektor_baik}\n🐈 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
 
             }
 
@@ -4990,7 +4990,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *When Challenged :* ${anu.message.kala_tinantang}\n🐶 *Info :* ${anu.message.info}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *When Challenged :* ${anu.message.kala_tinantang}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5006,7 +5006,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Results :* ${anu.message.result}\n🐶 *Info :* ${anu.message.info}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5022,7 +5022,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Day Of Birth :* ${anu.message.hari_lahir}\n🐶 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐶 *Fateful Day :* ${anu.message.hari_naas}\n🐶 *Info :* ${anu.message.catatan}\n🐶 *Notes :* ${anu.message.info}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Fateful Day :* ${anu.message.hari_naas}\n🐈 *Info :* ${anu.message.catatan}\n🐈 *Notes :* ${anu.message.info}`, m)
 
             }
 
@@ -5038,7 +5038,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Day Of Birth :* ${anu.message.hari_lahir}\n🐶 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐶 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5054,7 +5054,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Day Of Birth :* ${anu.message.hari_lahir}\n🐶 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐶 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5070,7 +5070,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5086,7 +5086,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Date :* ${anu.message.tanggal}\n🐶 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐶 *Day Character :* ${anu.message.watak_hari}\n🐶 *Dragon Day :* ${anu.message.naga_hari}\n🐶 *Good Hour :* ${anu.message.jam_baik}\n🐶 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tanggal}\n🐈 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐈 *Day Character :* ${anu.message.watak_hari}\n🐈 *Dragon Day :* ${anu.message.naga_hari}\n🐈 *Good Hour :* ${anu.message.jam_baik}\n🐈 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
 
             }
 
@@ -5102,7 +5102,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Lifeline :* ${anu.message.garis_hidup}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Lifeline :* ${anu.message.garis_hidup}`, m)
 
             }
 
@@ -5118,7 +5118,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Name :* ${anu.message.nama}\n🐶 *Born :* ${anu.message.tgl_lahir}\n🐶 *Results :* ${anu.message.result}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}`, m)
 
             }
 
@@ -5134,7 +5134,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Date :* ${anu.message.tgl_memancing}\n🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tgl_memancing}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5150,7 +5150,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Results :* ${anu.message.result}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5220,7 +5220,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Zodiac :* ${anu.message.zodiak}\n🐶 *Number :* ${anu.message.nomor_keberuntungan}\n🐶 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐶 *Planet :* ${anu.message.planet_yang_mengitari}\n🐶 *Flower :* ${anu.message.bunga_keberuntungan}\n🐶 *Color :* ${anu.message.warna_keberuntungan}\n🐶 *Stone :* ${anu.message.batu_keberuntungan}\n🐶 *Element :* ${anu.message.elemen_keberuntungan}\n🐶 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐶 *Notes :* ${anu.message.catatan}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Zodiac :* ${anu.message.zodiak}\n🐈 *Number :* ${anu.message.nomor_keberuntungan}\n🐈 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐈 *Planet :* ${anu.message.planet_yang_mengitari}\n🐈 *Flower :* ${anu.message.bunga_keberuntungan}\n🐈 *Color :* ${anu.message.warna_keberuntungan}\n🐈 *Stone :* ${anu.message.batu_keberuntungan}\n🐈 *Element :* ${anu.message.elemen_keberuntungan}\n🐈 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5234,7 +5234,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐶 *Results :* ${anu.message}`, m)
+                iiuziBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message}`, m)
 
             }
 
@@ -5318,7 +5318,7 @@ case 'webtonsearch': case 'webtoon':
 
                     if (anu.status == false) return reply(anu.result.message)
 
-                    iiuziBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', `🐶 Full Name : ${anu.caption.full_name}\n🐶 User Name : ${anu.caption.user_name}\n🐶 ID ${anu.caption.user_id}\n🐶 Following : ${anu.caption.followers}\n🐶 Followers : ${anu.caption.following}\n🐶 Bussines : ${anu.caption.bussines}\n🐶 Professional : ${anu.caption.profesional}\n🐶 Verified : ${anu.caption.verified}\n🐶 Private : ${anu.caption.private}\n🐶 Bio : ${anu.caption.biography}\n🐶 Bio Url : ${anu.caption.bio_url}`, m)
+                    iiuziBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', `🐈 Full Name : ${anu.caption.full_name}\n🐈 User Name : ${anu.caption.user_name}\n🐈 ID ${anu.caption.user_id}\n🐈 Following : ${anu.caption.followers}\n🐈 Followers : ${anu.caption.following}\n🐈 Bussines : ${anu.caption.bussines}\n🐈 Professional : ${anu.caption.profesional}\n🐈 Verified : ${anu.caption.verified}\n🐈 Private : ${anu.caption.private}\n🐈 Bio : ${anu.caption.biography}\n🐈 Bio Url : ${anu.caption.bio_url}`, m)
 
 		    db.data.users[m.sender].limit -= 1
 
@@ -5330,7 +5330,7 @@ case 'webtonsearch': case 'webtoon':
 
                     if (anu.status == false) return reply(anu.result.message)
 
-                    reply(`🐶 Name : ${anu.name}\n🐶 Version : ${Object.keys(anu.versions)}\n🐶 Created : ${tanggal(anu.time.created)}\n🐶 Modified : ${tanggal(anu.time.modified)}\n🐶 Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n🐶 Description : ${anu.description}\n🐶 Homepage : ${anu.homepage}\n🐶 Keywords : ${anu.keywords}\n🐶 Author : ${anu.author.name}\n🐶 License : ${anu.license}\n🐶 Readme : ${anu.readme}`)
+                    reply(`🐈 Name : ${anu.name}\n🐈 Version : ${Object.keys(anu.versions)}\n🐈 Created : ${tanggal(anu.time.created)}\n🐈 Modified : ${tanggal(anu.time.modified)}\n🐈 Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n🐈 Description : ${anu.description}\n🐈 Homepage : ${anu.homepage}\n🐈 Keywords : ${anu.keywords}\n🐈 Author : ${anu.author.name}\n🐈 License : ${anu.license}\n🐈 Readme : ${anu.readme}`)
 
 		    db.data.users[m.sender].limit -= 1
 
@@ -5502,7 +5502,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
 
-                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.img, `🐶 Title : ${anu.result.lagu}\n🐶 Album : ${anu.result.album}\n🐶 Singer : ${anu.result.penyanyi}\n🐶 Publish : ${anu.result.publish}\n🐶 Lyrics :\n${anu.result.lirik.result}`, m)
+                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.img, `🐈 Title : ${anu.result.lagu}\n🐈 Album : ${anu.result.album}\n🐈 Singer : ${anu.result.penyanyi}\n🐈 Publish : ${anu.result.publish}\n🐈 Lyrics :\n${anu.result.lirik.result}`, m)
 
                 iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
 
@@ -5518,7 +5518,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
 
-                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.thumb, `🐶 Title : ${anu.result.title}\n🐶 Url : ${isUrl(text)[0]}`)
+                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.thumb, `🐈 Title : ${anu.result.title}\n🐈 Url : ${isUrl(text)[0]}`)
 
                 iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
 
@@ -5604,7 +5604,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐶 Title : ${anu.result.title}`}, { quoted: m })
+                iiuziBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐈 Title : ${anu.result.title}`}, { quoted: m })
 
             }
 
@@ -5648,15 +5648,15 @@ case 'webtonsearch': case 'webtoon':
 
 			caption: `
 
-🐶 Title : ${anu.title}
+🐈 Title : ${anu.title}
 
-🐶 Author : ${anu.author.name}
+🐈 Author : ${anu.author.name}
 
-🐶 Like : ${anu.like}
+🐈 Like : ${anu.like}
 
-🐶 Caption : ${anu.caption}
+🐈 Caption : ${anu.caption}
 
-🐶 Url : ${anu.media[0]}
+🐈 Url : ${anu.media[0]}
 
 To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
 
@@ -5676,7 +5676,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 		    anu.media.map(async (url) => {
 
-		        iiuziBotInc.sendMessage(m.chat, { image: { url }, caption: `🐶 Title : ${anu.title}\n🐶 Author : ${anu.author.name}\n🐶 Like : ${anu.like}\n🐶 Caption : ${anu.caption}` }, { quoted: m })
+		        iiuziBotInc.sendMessage(m.chat, { image: { url }, caption: `🐈 Title : ${anu.title}\n🐈 Author : ${anu.author.name}\n🐈 Like : ${anu.like}\n🐈 Caption : ${anu.caption}` }, { quoted: m })
 
 		    })
 
@@ -6546,7 +6546,7 @@ break
 
                     	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
 
-                    	iiuziBotInc.sendMessage(`916909137213@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                    	iiuziBotInc.sendMessage(`918590451659@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 
 Report Message: ${text}` })
 
@@ -6574,7 +6574,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 
                             locationMessage: {
 
-                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx.jpg')},
+                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx md.jpg')},
 
                             hydratedFooterText: `┌─❖
 
@@ -6582,9 +6582,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 
 └┬❖ 「 ${pushname} 」
 
-┌┤✑  Cheems Bot With You Forever 
+┌┤✑  Minx Bot With You Forever 
 
-││✑  🐶🖐️!!
+││✑  🐈🖐️!!
 
 │└───────────────┈ ⳹
 
@@ -6694,7 +6694,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 
                             locationMessage: {
 
-                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx.jpg')}, 
+                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx md.jpg')}, 
 
                             hydratedFooterText: `
 
@@ -7038,7 +7038,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' }, caption: `*Hi Bro ${m.pushName}*\n\nDonate Me : \n\n🐶 Fampay : https://telegra.ph/file/6ba2aed566865a068e91f.jpg\n🐶 Paytm : https://telegra.ph/file/577bd4f28d90ca2c7f369.jpg\n\nIf You Want To Donate, Talk With The Owner First\nwa.me/916909137213 (Click To Contact)` }, { quoted: m })
+                iiuziBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/453c6f2163fcd32113093.jpg' }, caption: `*Hi Bro ${m.pushName}*\n\nDonate Me : \n\n🐈 YouTube : https://youtu.be/Nhjw12ODzKI\n🐈 GitHub : https://github.com/iiuzi-x0\n\nIf You Want To Donate, Talk With The Owner First\nwa.me/918590451659 (Click To Contact)` }, { quoted: m })
 
             }
 
@@ -7046,7 +7046,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 
             case 'sc': case 'script': {
 
-                reply(`GitHub : https://github.com/iiuzi-0x/Minx-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
+                reply(`GitHub : https://github.com/iiuzi-x0/Minx-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
 
             }
 
@@ -7522,7 +7522,7 @@ case 'allmenu': {
 
                             locationMessage: {
 
-                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx.jpg')},
+                            jpegThumbnail: fs.readFileSync('./MinxMedia/Minx md.jpg')},
 
                             hydratedFooterText: `${pushname}`,
 
