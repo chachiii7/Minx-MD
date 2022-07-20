@@ -18,7 +18,7 @@
 
 
 
-//© 2022 iiuzi Bot Inc. Minx-MD
+//© 2022 snoqx Bot Inc. Minx-MD
 
 
 
@@ -38,7 +38,7 @@ require('./settings')
 
 
 
-const { default: iiuziBotIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: snoqxBotIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 
 
 
@@ -238,11 +238,11 @@ if (global.db) setInterval(async () => {
 
 
 
-async function startiiuziBotInc() {
+async function startsnoqxBotInc() {
 
 
 
-    const iiuziBotInc = iiuziBotIncConnect({
+    const snoqxBotInc = snoqxBotIncConnect({
 
 
 
@@ -254,7 +254,7 @@ async function startiiuziBotInc() {
 
 
 
-        browser: ['Subscribe iiuzi','Safari','1.0.0'],
+        browser: ['Subscribe snoqx','Safari','1.0.0'],
 
 
 
@@ -270,7 +270,7 @@ async function startiiuziBotInc() {
 
 
 
-    store.bind(iiuziBotInc.ev)
+    store.bind(snoqxBotInc.ev)
 
 
 
@@ -282,7 +282,7 @@ async function startiiuziBotInc() {
 
 
 
-    iiuziBotInc.ws.on('CB:call', async (json) => {
+    snoqxBotInc.ws.on('CB:call', async (json) => {
 
 
 
@@ -294,11 +294,11 @@ async function startiiuziBotInc() {
 
 
 
-    let pa7rick = await iiuziBotInc.sendContact(callerId, global.owner)
+    let pa7rick = await snoqxBotInc.sendContact(callerId, global.owner)
 
 
 
-    iiuziBotInc.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : pa7rick })
+    snoqxBotInc.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : pa7rick })
 
 
 
@@ -306,7 +306,7 @@ async function startiiuziBotInc() {
 
 
 
-    await iiuziBotInc.updateBlockStatus(callerId, "block")
+    await snoqxBotInc.updateBlockStatus(callerId, "block")
 
 
 
@@ -322,7 +322,7 @@ async function startiiuziBotInc() {
 
 
 
-    iiuziBotInc.ev.on('messages.upsert', async chatUpdate => {
+    snoqxBotInc.ev.on('messages.upsert', async chatUpdate => {
 
 
 
@@ -350,7 +350,7 @@ async function startiiuziBotInc() {
 
 
 
-        if (!iiuziBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+        if (!snoqxBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
 
 
 
@@ -358,11 +358,11 @@ async function startiiuziBotInc() {
 
 
 
-        m = smsg(iiuziBotInc, mek, store)
+        m = smsg(snoqxBotInc, mek, store)
 
 
 
-        require("./Minx")(iiuziBotInc, m, chatUpdate, store)
+        require("./Minx")(snoqxBotInc, m, chatUpdate, store)
 
 
 
@@ -390,7 +390,7 @@ async function startiiuziBotInc() {
 
 
 
-    iiuziBotInc.ev.on('groups.update', async pea => {
+    snoqxBotInc.ev.on('groups.update', async pea => {
 
 
 
@@ -406,7 +406,7 @@ async function startiiuziBotInc() {
 
 
 
-       ppgc = await iiuziBotInc.profilePictureUrl(pea[0].id, 'image')
+       ppgc = await snoqxBotInc.profilePictureUrl(pea[0].id, 'image')
 
 
 
@@ -414,7 +414,7 @@ async function startiiuziBotInc() {
 
 
 
-       ppgc = 'https://shortlink.iiuziBotIncarridho.my.id/rg1oT'
+       ppgc = 'https://shortlink.snoqxBotIncarridho.my.id/rg1oT'
 
 
 
@@ -430,7 +430,7 @@ async function startiiuziBotInc() {
 
 
 
-       iiuziBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
+       snoqxBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
 
 
 
@@ -438,7 +438,7 @@ async function startiiuziBotInc() {
 
 
 
-       iiuziBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
+       snoqxBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
 
 
 
@@ -446,7 +446,7 @@ async function startiiuziBotInc() {
 
 
 
-       iiuziBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
+       snoqxBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
 
 
 
@@ -454,7 +454,7 @@ async function startiiuziBotInc() {
 
 
 
-       iiuziBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
+       snoqxBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
 
 
 
@@ -462,7 +462,7 @@ async function startiiuziBotInc() {
 
 
 
-       iiuziBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
+       snoqxBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
 
 
 
@@ -478,7 +478,7 @@ async function startiiuziBotInc() {
 
 
 
-    iiuziBotInc.ev.on('group-participants.update', async (anu) => {
+    snoqxBotInc.ev.on('group-participants.update', async (anu) => {
 
 
 
@@ -490,7 +490,7 @@ async function startiiuziBotInc() {
 
 
 
-            let metadata = await iiuziBotInc.groupMetadata(anu.id)
+            let metadata = await snoqxBotInc.groupMetadata(anu.id)
 
 
 
@@ -510,7 +510,7 @@ async function startiiuziBotInc() {
 
 
 
-                    ppuser = await iiuziBotInc.profilePictureUrl(num, 'image')
+                    ppuser = await snoqxBotInc.profilePictureUrl(num, 'image')
 
 
 
@@ -538,7 +538,7 @@ async function startiiuziBotInc() {
 
 
 
-                    ppgroup = await iiuziBotInc.profilePictureUrl(anu.id, 'image')
+                    ppgroup = await snoqxBotInc.profilePictureUrl(anu.id, 'image')
 
 
 
@@ -562,7 +562,7 @@ async function startiiuziBotInc() {
 
 
 
-        let nama = await iiuziBotInc.getName(num)
+        let nama = await snoqxBotInc.getName(num)
 
 
 
@@ -590,7 +590,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-                    iiuziBotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
+                    snoqxBotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
 
 
 
@@ -622,7 +622,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-                    iiuziBotInc.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `🐭✑ @${num.split("@")[0]} Left ${metadata.subject}
+                    snoqxBotInc.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `🐭✑ @${num.split("@")[0]} Left ${metadata.subject}
 
 
 
@@ -666,7 +666,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.decodeJid = (jid) => {
+    snoqxBotInc.decodeJid = (jid) => {
 
 
 
@@ -698,7 +698,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.ev.on('contacts.update', update => {
+    snoqxBotInc.ev.on('contacts.update', update => {
 
 
 
@@ -706,7 +706,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-            let id = iiuziBotInc.decodeJid(contact.id)
+            let id = snoqxBotInc.decodeJid(contact.id)
 
 
 
@@ -726,15 +726,15 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.getName = (jid, withoutContact  = false) => {
+    snoqxBotInc.getName = (jid, withoutContact  = false) => {
 
 
 
-        id = iiuziBotInc.decodeJid(jid)
+        id = snoqxBotInc.decodeJid(jid)
 
 
 
-        withoutContact = iiuziBotInc.withoutContact || withoutContact 
+        withoutContact = snoqxBotInc.withoutContact || withoutContact 
 
 
 
@@ -750,7 +750,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-            if (!(v.name || v.subject)) v = iiuziBotInc.groupMetadata(id) || {}
+            if (!(v.name || v.subject)) v = snoqxBotInc.groupMetadata(id) || {}
 
 
 
@@ -774,11 +774,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        } : id === iiuziBotInc.decodeJid(iiuziBotInc.user.id) ?
+        } : id === snoqxBotInc.decodeJid(snoqxBotInc.user.id) ?
 
 
 
-            iiuziBotInc.user :
+            snoqxBotInc.user :
 
 
 
@@ -798,7 +798,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+    snoqxBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 
 
 
@@ -814,7 +814,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-	    	displayName: await iiuziBotInc.getName(i + '@s.whatsapp.net'),
+	    	displayName: await snoqxBotInc.getName(i + '@s.whatsapp.net'),
 
 
 
@@ -830,7 +830,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-	iiuziBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+	snoqxBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
 
 
 
@@ -842,11 +842,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.setStatus = (status) => {
+    snoqxBotInc.setStatus = (status) => {
 
 
 
-        iiuziBotInc.query({
+        snoqxBotInc.query({
 
 
 
@@ -910,7 +910,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.public = true
+    snoqxBotInc.public = true
 
 
 
@@ -918,7 +918,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.serializeM = (m) => smsg(iiuziBotInc, m, store)
+    snoqxBotInc.serializeM = (m) => smsg(snoqxBotInc, m, store)
 
 
 
@@ -926,7 +926,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.ev.on('connection.update', async (update) => {
+    snoqxBotInc.ev.on('connection.update', async (update) => {
 
 
 
@@ -942,35 +942,35 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); iiuziBotInc.logout(); }
+            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); snoqxBotInc.logout(); }
 
 
 
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🐈Connection closed, reconnecting...."); startiiuziBotInc(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("🐈Connection closed, reconnecting...."); startsnoqxBotInc(); }
 
 
 
-            else if (reason === DisconnectReason.connectionLost) { console.log("🐈Connection Lost from Server, reconnecting..."); startiiuziBotInc(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("🐈Connection Lost from Server, reconnecting..."); startsnoqxBotInc(); }
 
 
 
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🐈Connection Replaced, Another New Session Opened, Please Close Current Session First"); iiuziBotInc.logout(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("🐈Connection Replaced, Another New Session Opened, Please Close Current Session First"); snoqxBotInc.logout(); }
 
 
 
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🐈Device Logged Out, Please Scan Again And Run.`); iiuziBotInc.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`🐈Device Logged Out, Please Scan Again And Run.`); snoqxBotInc.logout(); }
 
 
 
-            else if (reason === DisconnectReason.restartRequired) { console.log("🐈Restart Required, Restarting..."); startiiuziBotInc(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("🐈Restart Required, Restarting..."); startsnoqxBotInc(); }
 
 
 
-            else if (reason === DisconnectReason.timedOut) { console.log("🐈Connection TimedOut, Reconnecting..."); startiiuziBotInc(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("🐈Connection TimedOut, Reconnecting..."); startsnoqxBotInc(); }
 
 
 
-            else iiuziBotInc.end(`🐈Unknown DisconnectReason: ${reason}|${connection}`)
+            else snoqxBotInc.end(`🐈Unknown DisconnectReason: ${reason}|${connection}`)
 
 
 
@@ -990,7 +990,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.ev.on('creds.update', saveState)
+    snoqxBotInc.ev.on('creds.update', saveState)
 
 
 
@@ -1042,11 +1042,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+    snoqxBotInc.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
 
 
 
-        let message = await prepareWAMessageMedia({ image: img }, { upload: iiuziBotInc.waUploadToServer })
+        let message = await prepareWAMessageMedia({ image: img }, { upload: snoqxBotInc.waUploadToServer })
 
 
 
@@ -1090,7 +1090,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-            iiuziBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
+            snoqxBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
 
 
 
@@ -1138,7 +1138,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+    snoqxBotInc.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
 
 
 
@@ -1170,7 +1170,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        iiuziBotInc.sendMessage(jid, buttonMessage, { quoted, ...options })
+        snoqxBotInc.sendMessage(jid, buttonMessage, { quoted, ...options })
 
 
 
@@ -1214,7 +1214,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendText = (jid, text, quoted = '', options) => iiuziBotInc.sendMessage(jid, { text: text, ...options }, { quoted })
+    snoqxBotInc.sendText = (jid, text, quoted = '', options) => snoqxBotInc.sendMessage(jid, { text: text, ...options }, { quoted })
 
 
 
@@ -1258,7 +1258,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+    snoqxBotInc.sendImage = async (jid, path, caption = '', quoted = '', options) => {
 
 
 
@@ -1266,7 +1266,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        return await iiuziBotInc.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
+        return await snoqxBotInc.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
 
 
 
@@ -1314,7 +1314,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
+    snoqxBotInc.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
 
 
 
@@ -1322,7 +1322,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        return await iiuziBotInc.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
+        return await snoqxBotInc.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
 
 
 
@@ -1370,7 +1370,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
+    snoqxBotInc.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
 
 
 
@@ -1378,7 +1378,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        return await iiuziBotInc.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
+        return await snoqxBotInc.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
 
 
 
@@ -1422,7 +1422,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendTextWithMentions = async (jid, text, quoted, options = {}) => iiuziBotInc.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
+    snoqxBotInc.sendTextWithMentions = async (jid, text, quoted, options = {}) => snoqxBotInc.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
 
 
@@ -1462,7 +1462,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+    snoqxBotInc.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
 
 
 
@@ -1498,7 +1498,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        await iiuziBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await snoqxBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
 
 
 
@@ -1546,7 +1546,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+    snoqxBotInc.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
 
 
 
@@ -1582,7 +1582,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        await iiuziBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await snoqxBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
 
 
 
@@ -1626,7 +1626,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+    snoqxBotInc.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
 
 
 
@@ -1690,7 +1690,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.downloadMediaMessage = async (message) => {
+    snoqxBotInc.downloadMediaMessage = async (message) => {
 
 
 
@@ -1778,11 +1778,11 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
+    snoqxBotInc.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
 
 
 
-        let types = await iiuziBotInc.getFile(path, true)
+        let types = await snoqxBotInc.getFile(path, true)
 
 
 
@@ -1862,7 +1862,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-       await iiuziBotInc.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
+       await snoqxBotInc.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
 
 
 
@@ -1910,7 +1910,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.copyNForward = async (jid, message, forceForward = false, options = {}) => {
+    snoqxBotInc.copyNForward = async (jid, message, forceForward = false, options = {}) => {
 
 
 
@@ -2034,7 +2034,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-        await iiuziBotInc.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
+        await snoqxBotInc.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
 
 
 
@@ -2050,7 +2050,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.cMod = (jid, copy, text = '', sender = iiuziBotInc.user.id, options = {}) => {
+    snoqxBotInc.cMod = (jid, copy, text = '', sender = snoqxBotInc.user.id, options = {}) => {
 
 
 
@@ -2134,7 +2134,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-		copy.key.fromMe = sender === iiuziBotInc.user.id
+		copy.key.fromMe = sender === snoqxBotInc.user.id
 
 
 
@@ -2178,7 +2178,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    iiuziBotInc.getFile = async (PATH, save) => {
+    snoqxBotInc.getFile = async (PATH, save) => {
 
 
 
@@ -2258,7 +2258,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-    return iiuziBotInc
+    return snoqxBotInc
 
 
 
@@ -2270,7 +2270,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 
 
-startiiuziBotInc()
+startsnoqxBotInc()
 
 
 
