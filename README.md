@@ -15,7 +15,7 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 heroku/nodejs
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iiuzi-0x/Minx-MD/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/snoqx/Minx-MD/)
 
 
 
