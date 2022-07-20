@@ -8,7 +8,7 @@
 
 //no credit? i will take action immediately
 
-//© 2022 iiuzi Bot Inc. MinxBot
+//© 2022 snoqx Bot Inc. MinxBot
 
 //Thank you to Lord Buddha, Family and Myself
 
@@ -46,7 +46,7 @@ const primbon = new Primbon()
 
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 
-const { iiuzi } = require('xfarr-api')
+const { snoqx } = require('xfarr-api')
 
 
 
@@ -268,7 +268,7 @@ let vote = db.data.others.vote = []
 
 
 
-module.exports = iiuziBotInc = async (iiuziBotInc, m, chatUpdate, store) => {
+module.exports = snoqxBotInc = async (snoqxBotInc, m, chatUpdate, store) => {
 
     try {
 
@@ -286,7 +286,7 @@ module.exports = iiuziBotInc = async (iiuziBotInc, m, chatUpdate, store) => {
 
         const pushname = m.pushName || "No Name"
 
-        const botNumber = await iiuziBotInc.decodeJid(iiuziBotInc.user.id)
+        const botNumber = await snoqxBotInc.decodeJid(snoqxBotInc.user.id)
 
         const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 
@@ -310,7 +310,7 @@ module.exports = iiuziBotInc = async (iiuziBotInc, m, chatUpdate, store) => {
 
         //group\\
 
-        const groupMetadata = m.isGroup ? await iiuziBotInc.groupMetadata(m.chat).catch(e => {}) : ''
+        const groupMetadata = m.isGroup ? await snoqxBotInc.groupMetadata(m.chat).catch(e => {}) : ''
 
         const groupName = m.isGroup ? groupMetadata.subject : ''
 
@@ -414,11 +414,11 @@ module.exports = iiuziBotInc = async (iiuziBotInc, m, chatUpdate, store) => {
 
 	
 
-	//group target by iiuzi\\
+	//group target by snoqx\\
 
 const reply = (teks) => {
 
-            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/EcVIsg2j0UH93Z1sLhTCyW"}}}, { quoted: m})
+            snoqxBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/EcVIsg2j0UH93Z1sLhTCyW"}}}, { quoted: m})
 
         }
 
@@ -426,7 +426,7 @@ const reply = (teks) => {
 
         const replay = (teks) => {
 
-            iiuziBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
+            snoqxBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./MinxMedia/Minx md.jpg`),"sourceUrl": "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"}}}, { quoted: m})
 
         }
 
@@ -434,7 +434,7 @@ const reply = (teks) => {
 
         //Public & Self\\
 
-        if (!iiuziBotInc.public) {
+        if (!snoqxBotInc.public) {
 
             if (!m.key.fromMe) return
 
@@ -446,7 +446,7 @@ const reply = (teks) => {
 
         if (m.message) {
 
-            iiuziBotInc.sendReadReceipt(m.chat, m.sender, [m.key.id])
+            snoqxBotInc.sendReadReceipt(m.chat, m.sender, [m.key.id])
 
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
 
@@ -488,7 +488,7 @@ const reply = (teks) => {
 
 		let uptime = await runtime(process.uptime())
 
-		await iiuziBotInc.setStatus(`${iiuziBotInc.user.name} | Runtime : ${runtime(uptime)}`)
+		await snoqxBotInc.setStatus(`${snoqxBotInc.user.name} | Runtime : ${runtime(uptime)}`)
 
 		setting.status = new Date() * 1
 
@@ -508,7 +508,7 @@ const reply = (teks) => {
 
         if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
 
-        let gclink = (`https://chat.whatsapp.com/`+await iiuziBotInc.groupInviteCode(m.chat))
+        let gclink = (`https://chat.whatsapp.com/`+await snoqxBotInc.groupInviteCode(m.chat))
 
         let isLinkThisGc = new RegExp(gclink, 'i')
 
@@ -520,7 +520,7 @@ const reply = (teks) => {
 
         if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐈`)
 
-        iiuziBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+        snoqxBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 
         }
 
@@ -528,7 +528,7 @@ const reply = (teks) => {
 
 
 
-        //auto reply by iiuzi 🐭
+        //auto reply by snoqx 🐭
 
         for (let anji of setik){
 
@@ -536,7 +536,7 @@ const reply = (teks) => {
 
 					result = fs.readFileSync(`./MinxMedia/sticker/${anji}.webp`)
 
-					iiuziBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
+					snoqxBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
 
 					}
 
@@ -548,7 +548,7 @@ const reply = (teks) => {
 
 					result = fs.readFileSync(`./MinxMedia/vn/${anju}.mp3`)
 
-					iiuziBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+					snoqxBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 
 					}
 
@@ -560,7 +560,7 @@ const reply = (teks) => {
 
 					result = fs.readFileSync(`./MinxMedia/image/${anjh}.jpg`)
 
-					iiuziBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
+					snoqxBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
 
 					}
 
@@ -572,7 +572,7 @@ const reply = (teks) => {
 
 					result = fs.readFileSync(`./MinxMedia/vid/${anjh}.mp4`)
 
-					iiuziBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
+					snoqxBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
 
 					}
 
@@ -590,7 +590,7 @@ const reply = (teks) => {
 
         
 
-        //media detect by 🐭iiuzi\\
+        //media detect by 🐭snoqx\\
 
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 
@@ -612,13 +612,13 @@ const reply = (teks) => {
 
         let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {
 
-            userJid: iiuziBotInc.user.id,
+            userJid: snoqxBotInc.user.id,
 
             quoted: m.quoted && m.quoted.fakeObj
 
         })
 
-        messages.key.fromMe = areJidsSameUser(m.sender, iiuziBotInc.user.id)
+        messages.key.fromMe = areJidsSameUser(m.sender, snoqxBotInc.user.id)
 
         messages.key.id = m.key.id
 
@@ -636,7 +636,7 @@ const reply = (teks) => {
 
         }
 
-        iiuziBotInc.ev.emit('messages.upsert', msg)
+        snoqxBotInc.ev.emit('messages.upsert', msg)
 
         }
 
@@ -678,7 +678,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
     ${isSurender ? '' : `Perfect Player`}`.trim()
 
-            iiuziBotInc.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
+            snoqxBotInc.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
 
             if (isWin || isSurender) delete _family100['family100'+m.chat]
 
@@ -694,7 +694,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebaklagu[m.sender.split('@')[0]]
 
@@ -730,7 +730,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebakgambar[m.sender.split('@')[0]]
 
@@ -748,7 +748,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebakkata[m.sender.split('@')[0]]
 
@@ -768,7 +768,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete caklontong[m.sender.split('@')[0]]
 
@@ -788,7 +788,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebakkalimat[m.sender.split('@')[0]]
 
@@ -806,7 +806,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebaklirik[m.sender.split('@')[0]]
 
@@ -824,7 +824,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 
             if (budy.toLowerCase() == jawaban) {
 
-                await iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, iiuziBotInc.user.name, m)
+                await snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, snoqxBotInc.user.name, m)
 
                 delete tebaktebakan[m.sender.split('@')[0]]
 
@@ -950,9 +950,9 @@ Typed *surrender* to surrender and admited defeat`
 
 	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
 
-	    if (room.x !== room.o) await iiuziBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
+	    if (room.x !== room.o) await snoqxBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
 
-	    await iiuziBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
+	    await snoqxBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
 
 	    if (isTie || isWin) {
 
@@ -980,7 +980,7 @@ Typed *surrender* to surrender and admited defeat`
 
 	    if (/^(reject|no|later|n|nope(k.)?yes)/i.test(m.text)) {
 
-	    iiuziBotInc.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} Refuse Suit, Suit Canceled`, m)
+	    snoqxBotInc.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} Refuse Suit, Suit Canceled`, m)
 
 	    delete this.suit[roof.id]
 
@@ -996,7 +996,7 @@ Typed *surrender* to surrender and admited defeat`
 
 	    //delete roof[roof.id].waktu
 
-	    iiuziBotInc.sendText(m.chat, `Suit Has Been Sent To Chat
+	    snoqxBotInc.sendText(m.chat, `Suit Has Been Sent To Chat
 
 
 
@@ -1010,19 +1010,19 @@ Please Choose A Suit In The Respective Chat"
 
 Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] })
 
-	    if (!roof.pilih) iiuziBotInc.sendText(roof.p, `Please Select \n\Rock🗿\nPaper📄\nScissors✂️`, m)
+	    if (!roof.pilih) snoqxBotInc.sendText(roof.p, `Please Select \n\Rock🗿\nPaper📄\nScissors✂️`, m)
 
-	    if (!roof.pilih2) iiuziBotInc.sendText(roof.p2, `Please Select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
+	    if (!roof.pilih2) snoqxBotInc.sendText(roof.p2, `Please Select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
 
 	    roof.waktu_milih = setTimeout(() => {
 
-	    if (!roof.pilih && !roof.pilih2) iiuziBotInc.sendText(m.chat, `Both Players Don't Want To Play,\nSuit Canceled`)
+	    if (!roof.pilih && !roof.pilih2) snoqxBotInc.sendText(m.chat, `Both Players Don't Want To Play,\nSuit Canceled`)
 
 	    else if (!roof.pilih || !roof.pilih2) {
 
 	    win = !roof.pilih ? roof.p2 : roof.p
 
-	    iiuziBotInc.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose Suit, Game Over!`, m)
+	    snoqxBotInc.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Didn't Choose Suit, Game Over!`, m)
 
 	    }
 
@@ -1054,7 +1054,7 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 
 	    reply(`You Have Chosen ${m.text} ${!roof.pilih2 ? `\n\nWaiting For The Opponent To Choose` : ''}`)
 
-	    if (!roof.pilih2) iiuziBotInc.sendText(roof.p2, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
+	    if (!roof.pilih2) snoqxBotInc.sendText(roof.p2, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
 
 	    }
 
@@ -1066,7 +1066,7 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 
 	    reply(`You Have Chosen ${m.text} ${!roof.pilih ? `\n\nWaiting For The Opponent To Choose` : ''}`)
 
-	    if (!roof.pilih) iiuziBotInc.sendText(roof.p, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
+	    if (!roof.pilih) snoqxBotInc.sendText(roof.p, '_The Opponent Has Chosen_\nNow It Is Your Turn', 0)
 
 	    }
 
@@ -1092,7 +1092,7 @@ Click https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] 
 
 	    else if (stage == stage2) tie = true
 
-	    iiuziBotInc.sendText(roof.asal, `_*Suit Results*_${tie ? '\nSERIES' : ''}
+	    snoqxBotInc.sendText(roof.asal, `_*Suit Results*_${tie ? '\nSERIES' : ''}
 
 
 
@@ -1170,7 +1170,7 @@ if (q.includes('--help')) return reply(examkosong)
 
      
 
-     var iiuzibotinc = await getBuffer(picak+`User's Inventory`)
+     var snoqxbotinc = await getBuffer(picak+`User's Inventory`)
 
      let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
 
@@ -1202,7 +1202,7 @@ if (q.includes('--help')) return reply(examkosong)
 
      teksehmazeh += `_*${pushname}*_`
 
-     await iiuziBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, iiuzibotinc, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}}])
+     await snoqxBotInc.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, snoqxbotinc, [{"urlButton": {"displayText": "YouTube📍","url": `${myweb}`}}])
 
   }
 
@@ -1308,7 +1308,7 @@ if (q.includes('--help')) return reply(examkosong)
 
      }
 
-     iiuziBotInc.sendMessage(from, buttonMessage, { quoted: m })
+     snoqxBotInc.sendMessage(from, buttonMessage, { quoted: m })
 
    
 
@@ -1762,7 +1762,7 @@ if (q.includes('--help')) return reply(examkosong)
 
      }
 
-     iiuziBotInc.sendMessage(from, buttonMessage, { quoted: m })      
+     snoqxBotInc.sendMessage(from, buttonMessage, { quoted: m })      
 
   }, 5000)  
 
@@ -1872,9 +1872,9 @@ Waiting @${room.game.currentTurn.split('@')[0]}
 
 Type *surrender* to surrender and admit defeat`
 
-            if (room.x !== room.o) await iiuziBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
+            if (room.x !== room.o) await snoqxBotInc.sendText(room.x, str, m, { mentions: parseMention(str) } )
 
-            await iiuziBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
+            await snoqxBotInc.sendText(room.o, str, m, { mentions: parseMention(str) } )
 
             } else {
 
@@ -1914,7 +1914,7 @@ Type *surrender* to surrender and admit defeat`
 
             delete this.game
 
-            iiuziBotInc.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
+            snoqxBotInc.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
 
             } else if (!this.game) {
 
@@ -1964,7 +1964,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
             this.suit[id] = {
 
-            chat: await iiuziBotInc.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
+            chat: await snoqxBotInc.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
 
             id: id,
 
@@ -1976,7 +1976,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
             waktu: setTimeout(() => {
 
-            if (this.suit[id]) iiuziBotInc.sendText(m.chat, `_Suit Time Out_`, m)
+            if (this.suit[id]) snoqxBotInc.sendText(m.chat, `_Suit Time Out_`, m)
 
             delete this.suit[id]
 
@@ -1996,31 +1996,31 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                 if (args[0] === 'mute') {
 
-                    iiuziBotInc.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'unmute') {
 
-                    iiuziBotInc.chatModify({ mute: null }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ mute: null }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'archive') {
 
-                    iiuziBotInc.chatModify({  archive: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({  archive: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'unarchive') {
 
-                    iiuziBotInc.chatModify({ archive: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ archive: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'read') {
 
-                    iiuziBotInc.chatModify({ markRead: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ markRead: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'unread') {
 
-                    iiuziBotInc.chatModify({ markRead: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ markRead: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'delete') {
 
-                    iiuziBotInc.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    snoqxBotInc.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 }
 
@@ -2048,7 +2048,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     id: 'family100'+m.chat,
 
-                    pesan: await iiuziBotInc.sendText(m.chat, hasil, m),
+                    pesan: await snoqxBotInc.sendText(m.chat, hasil, m),
 
                     ...random,
 
@@ -2086,9 +2086,9 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    let msg = await iiuziBotInc.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
+                    let msg = await snoqxBotInc.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
 
-                    iiuziBotInc.sendText(m.chat, `What Is The Name Of This Song?\n\nArtist : ${result.artist}\nTime : 60 seconds`, msg).then(() => {
+                    snoqxBotInc.sendText(m.chat, `What Is The Name Of This Song?\n\nArtist : ${result.artist}\nTime : 60 seconds`, msg).then(() => {
 
                     tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2100,7 +2100,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant To Play? Press The Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant To Play? Press The Button Below`, snoqxBotInc.user.name, m)
 
                     delete tebaklagu[m.sender.split('@')[0]]
 
@@ -2114,7 +2114,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    iiuziBotInc.sendImage(m.chat, result.img, `Please Answer The Questions Above\n\nDescription : ${result.deskripsi}\nTime : 60 seconds`, m).then(() => {
+                    snoqxBotInc.sendImage(m.chat, result.img, `Please Answer The Questions Above\n\nDescription : ${result.deskripsi}\nTime : 60 seconds`, m).then(() => {
 
                     tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2126,7 +2126,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebakgambar[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebakgambar[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, snoqxBotInc.user.name, m)
 
                     delete tebakgambar[m.sender.split('@')[0]]
 
@@ -2136,11 +2136,11 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
 
-                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-x0/fungames/main/GuessTheWord.js')
+                    let anu = await fetchJson('https://raw.githubusercontent.com/snoqx/fungames/main/GuessTheWord.js')
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    iiuziBotInc.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
+                    snoqxBotInc.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
 
                     tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2152,7 +2152,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `Time Out\nAnswer:  ${tebakkata[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `Time Out\nAnswer:  ${tebakkata[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, snoqxBotInc.user.name, m)
 
                     delete tebakkata[m.sender.split('@')[0]]
 
@@ -2162,11 +2162,11 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
 
-                    let anu = await fetchJson('https://raw.githubusercontent.com/iiuzi-x0/fungames/main/GuessTheSentence.js')
+                    let anu = await fetchJson('https://raw.githubusercontent.com/snoqx/fungames/main/GuessTheSentence.js')
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    iiuziBotInc.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
+                    snoqxBotInc.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
 
                     tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2178,7 +2178,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `Time Out\nAnswer:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `Time Out\nAnswer:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, snoqxBotInc.user.name, m)
 
                     delete tebakkalimat[m.sender.split('@')[0]]
 
@@ -2192,7 +2192,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    iiuziBotInc.sendText(m.chat, `These Are The Lyrics Of Which Song? : *${result.soal}*?\nTime : 60 seconds`, m).then(() => {
+                    snoqxBotInc.sendText(m.chat, `These Are The Lyrics Of Which Song? : *${result.soal}*?\nTime : 60 seconds`, m).then(() => {
 
                     tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2204,7 +2204,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `Time Out\nAnswer:  ${tebaklirik[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `Time Out\nAnswer:  ${tebaklirik[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, snoqxBotInc.user.name, m)
 
                     delete tebaklirik[m.sender.split('@')[0]]
 
@@ -2218,7 +2218,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     let result = anu[Math.floor(Math.random() * anu.length)]
 
-                    iiuziBotInc.sendText(m.chat, `*Answer The Following Questions :*\n${result.soal}*\nTime : 60 seconds`, m).then(() => {
+                    snoqxBotInc.sendText(m.chat, `*Answer The Following Questions :*\n${result.soal}*\nTime : 60 seconds`, m).then(() => {
 
                     caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 
@@ -2232,7 +2232,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     console.log("Answer: " + result.jawaban)
 
-                    iiuziBotInc.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `Time Out\nAnswer:  ${caklontong[m.sender.split('@')[0]]}\nDescription : ${caklontong_desk[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, iiuziBotInc.user.name, m)
+                    snoqxBotInc.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `Time Out\nAnswer:  ${caklontong[m.sender.split('@')[0]]}\nDescription : ${caklontong_desk[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, snoqxBotInc.user.name, m)
 
                     delete caklontong[m.sender.split('@')[0]]
 
@@ -2256,7 +2256,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                 let result = await genMath(text.toLowerCase())
 
-                iiuziBotInc.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
+                snoqxBotInc.sendText(m.chat, `*What Is The Result Of: ${result.soal.toLowerCase()}*?\n\nTime: ${(result.waktu / 1000).toFixed(2)} second`, m).then(() => {
 
                     kuismath[m.sender.split('@')[0]] = result.jawaban
 
@@ -2302,7 +2302,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, jawab, iiuziBotInc.user.name, m, {mentions: ments})
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, jawab, snoqxBotInc.user.name, m, {mentions: ments})
 
             }
 
@@ -2330,7 +2330,7 @@ Cieeee, What's Going On❤️💖👀`
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, jawab, iiuziBotInc.user.name, m, {mentions: menst})
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, jawab, snoqxBotInc.user.name, m, {mentions: menst})
 
             }
 
@@ -2344,7 +2344,7 @@ Cieeee, What's Going On❤️💖👀`
 
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
 
 
 
@@ -2358,7 +2358,7 @@ iiuziBotInc.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, {
 
 					const kahk = lel[Math.floor(Math.random() * lel.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
 
 
 
@@ -2372,7 +2372,7 @@ case 'can':
 
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
 
 
 
@@ -2386,7 +2386,7 @@ case 'how':
 
 					const ya = gimana[Math.floor(Math.random() * gimana.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
 
 
 
@@ -2400,7 +2400,7 @@ case 'rate':
 
 					const te = ra[Math.floor(Math.random() * ra.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quoted: m })
 
 
 
@@ -2408,13 +2408,13 @@ iiuziBotInc.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quot
 
   case 'handsomecheck':
 
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @iiuzi`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @snoqx`)
 
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 
-iiuziBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
 
 
 
@@ -2422,13 +2422,13 @@ iiuziBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${
 
 case 'beautifulcheck':
 
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @iiuzi`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @snoqx`)
 
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 
 					const tik = can[Math.floor(Math.random() * can.length)]
 
-iiuziBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
 
 
 
@@ -2454,27 +2454,27 @@ case 'awesomecheck':
 
                       case 'uglycheck':
 
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @iiuzi`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @snoqx`)
 
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 
-iiuziBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
 
 					break
 
 					case 'charactercheck':
 
-					//YouTube📍 by iiuzi⛔\\
+					//YouTube📍 by snoqx⛔\\
 
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @iiuzi`)
+					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @snoqx`)
 
-					const iiuziy =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
+					const snoqxy =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 
-					const taky = iiuziy[Math.floor(Math.random() * iiuziy.length)]
+					const taky = snoqxy[Math.floor(Math.random() * snoqxy.length)]
 
-					iiuziBotInc.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
+					snoqxBotInc.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 
 				     break
 
@@ -2608,7 +2608,7 @@ iiuziBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, jawab, iiuziBotInc.user.name, m, {mentions: ments})
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, jawab, snoqxBotInc.user.name, m, {mentions: ments})
 
             }
 
@@ -2622,7 +2622,7 @@ case 'when':
 
 					const kapankah = kapan[Math.floor(Math.random() * kapan.length)]
 
-iiuziBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
+snoqxBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
 
 					break
 
@@ -2640,7 +2640,7 @@ case 'wangy':
 
 case 'checkdeath':
 
-             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} iiuzi`)
+             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} snoqx`)
 
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
 
@@ -2676,7 +2676,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, reactionMessage)
+                snoqxBotInc.sendMessage(m.chat, reactionMessage)
 
             }
 
@@ -2694,7 +2694,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 let result = args[0].split('https://chat.whatsapp.com/')[1]
 
-                await iiuziBotInc.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
             }
 
@@ -2704,7 +2704,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 if (!isCreator) return replay(`${mess.owner}`)
 
-                await iiuziBotInc.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
             }
 
@@ -2736,7 +2736,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2752,7 +2752,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2768,7 +2768,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2784,7 +2784,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2796,7 +2796,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2808,7 +2808,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-		await iiuziBotInc.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+		await snoqxBotInc.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
 	}
 
@@ -2824,7 +2824,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 if (!text) replay(`Where Is The Text?`)
 
-                await iiuziBotInc.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
 
             }
 
@@ -2840,7 +2840,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 if (!text) replay(`Where Is The Text?`)
 
-                await iiuziBotInc.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
 
             }
 
@@ -2856,9 +2856,9 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
-                await iiuziBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
+                await snoqxBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
 
                 reply(mess.success)
 
@@ -2878,9 +2878,9 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 
                 if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
-                await iiuziBotInc.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
+                await snoqxBotInc.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
 
                 reply(mess.success)
 
@@ -2908,7 +2908,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
 
                 }
 
@@ -2922,7 +2922,7 @@ let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝
 
             if (!isAdmins) return replay(`${mess.admin}`)
 
-            iiuziBotInc.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+            snoqxBotInc.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
 
             }
 
@@ -3024,7 +3024,7 @@ let buttonsVote = [
 
                 text: teks_vote,
 
-                footer: iiuziBotInc.user.name,
+                footer: snoqxBotInc.user.name,
 
                 buttons: buttonsVote,
 
@@ -3032,7 +3032,7 @@ let buttonsVote = [
 
             }
 
-            iiuziBotInc.sendMessage(m.chat, buttonMessageVote)
+            snoqxBotInc.sendMessage(m.chat, buttonMessageVote)
 
 	    }
 
@@ -3106,7 +3106,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
                 text: teks_vote,
 
-                footer: iiuziBotInc.user.name,
+                footer: snoqxBotInc.user.name,
 
                 buttons: buttonsUpvote,
 
@@ -3116,7 +3116,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
              }
 
-            iiuziBotInc.sendMessage(m.chat, buttonMessageUpvote)
+            snoqxBotInc.sendMessage(m.chat, buttonMessageUpvote)
 
 	    }
 
@@ -3190,7 +3190,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
                 text: teks_vote,
 
-                footer: iiuziBotInc.user.name,
+                footer: snoqxBotInc.user.name,
 
                 buttons: buttonsDevote,
 
@@ -3200,7 +3200,7 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
             }
 
-            iiuziBotInc.sendMessage(m.chat, buttonMessageDevote)
+            snoqxBotInc.sendMessage(m.chat, buttonMessageDevote)
 
 	}
 
@@ -3256,11 +3256,11 @@ ${vote[m.chat][2].map((v, i) => `┃╠ ${i + 1}. @${v.split`@`[0]}`).join('\n')
 
 
 
-©${iiuziBotInc.user.id}
+©${snoqxBotInc.user.id}
 
 `
 
-iiuziBotInc.sendTextWithMentions(m.chat, teks_vote, m)
+snoqxBotInc.sendTextWithMentions(m.chat, teks_vote, m)
 
 break
 
@@ -3288,11 +3288,11 @@ break
 
                 if (args[0] === 'close'){
 
-                    await iiuziBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Successful Closing The Group`)).catch((err) => reply(jsonformat(err)))
+                    await snoqxBotInc.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Successful Closing The Group`)).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'open'){
 
-                    await iiuziBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
+                    await snoqxBotInc.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
 
                 } else {
 
@@ -3304,7 +3304,7 @@ break
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `Group Mode`, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `Group Mode`, snoqxBotInc.user.name, m)
 
 
 
@@ -3324,11 +3324,11 @@ break
 
              if (args[0] === 'open'){
 
-                await iiuziBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Edit Group Info`)).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Edit Group Info`)).catch((err) => reply(jsonformat(err)))
 
              } else if (args[0] === 'close'){
 
-                await iiuziBotInc.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Edit Group Info`)).catch((err) => reply(jsonformat(err)))
+                await snoqxBotInc.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Edit Group Info`)).catch((err) => reply(jsonformat(err)))
 
              } else {
 
@@ -3340,7 +3340,7 @@ break
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `Mode Edit Info`, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `Mode Edit Info`, snoqxBotInc.user.name, m)
 
 
 
@@ -3384,7 +3384,7 @@ break
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `Antilink Mode`, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `Antilink Mode`, snoqxBotInc.user.name, m)
 
                 }
 
@@ -3406,7 +3406,7 @@ break
 
                 db.data.chats[m.chat].mute = true
 
-                reply(`${iiuziBotInc.user.name} Has Been Muted In This Group !`)
+                reply(`${snoqxBotInc.user.name} Has Been Muted In This Group !`)
 
                 } else if (args[0] === "off") {
 
@@ -3414,7 +3414,7 @@ break
 
                 db.data.chats[m.chat].mute = false
 
-                reply(`${iiuziBotInc.user.name} Has Been Unmuted In This Group!`)
+                reply(`${snoqxBotInc.user.name} Has Been Unmuted In This Group!`)
 
                 } else {
 
@@ -3426,7 +3426,7 @@ break
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `Mute Bot`, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `Mute Bot`, snoqxBotInc.user.name, m)
 
                 }
 
@@ -3438,9 +3438,9 @@ break
 
                 if (!m.isGroup) return replay(`${mess.group}`)
 
-                let response = await iiuziBotInc.groupInviteCode(m.chat)
+                let response = await snoqxBotInc.groupInviteCode(m.chat)
 
-                iiuziBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
+                snoqxBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
 
             }
 
@@ -3458,11 +3458,11 @@ break
 
                 if (args[0] === 'enable') {
 
-                    await iiuziBotInc.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    await snoqxBotInc.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 } else if (args[0] === 'disable') {
 
-                    await iiuziBotInc.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+                    await snoqxBotInc.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 
                 }
 
@@ -3478,7 +3478,7 @@ break
 
                 if (!isBaileys) return replay(`The Message Was Not Sent By A Bot!`)
 
-                iiuziBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
+                snoqxBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
 
             }
 
@@ -3488,9 +3488,9 @@ break
 
                 if (!isCreator) return replay(`${mess.owner}`)
 
-                if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} iiuzi Handsome`)
+                if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} snoqx Handsome`)
 
-                let getGroups = await iiuziBotInc.groupFetchAllParticipating()
+                let getGroups = await snoqxBotInc.groupFetchAllParticipating()
 
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
 
@@ -3546,7 +3546,7 @@ break
 
                       let txt = `「 Minx Bot Broadcast 」\n\n${text}`
 
-                      iiuziBotInc.send5ButImg(i, txt, iiuziBotInc.user.name, global.thumb, btn)
+                      snoqxBotInc.send5ButImg(i, txt, snoqxBotInc.user.name, global.thumb, btn)
 
                     }
 
@@ -3560,7 +3560,7 @@ break
 
                 if (!isCreator) return replay(`${mess.owner}`)
 
-                if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} iiuzi`)
+                if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} snoqx`)
 
                 let anu = await store.chats.all().map(v => v.id)
 
@@ -3614,7 +3614,7 @@ break
 
                       let txt = `「 Minx Bot Broadcast 」\n\n${text}`
 
-                      iiuziBotInc.send5ButImg(yoi, txt, iiuziBotInc.user.name, global.thumb, btn)
+                      snoqxBotInc.send5ButImg(yoi, txt, snoqxBotInc.user.name, global.thumb, btn)
 
 		}
 
@@ -3648,7 +3648,7 @@ break
 
                 }
 
-                iiuziBotInc.sendTextWithMentions(m.chat, teks, m)
+                snoqxBotInc.sendTextWithMentions(m.chat, teks, m)
 
             }
 
@@ -3658,7 +3658,7 @@ break
 
 		if (!m.quoted) return reply('Reply Message!!')
 
-		let wokwol = await iiuziBotInc.serializeM(await m.getQuotedObj())
+		let wokwol = await snoqxBotInc.serializeM(await m.getQuotedObj())
 
 		if (!wokwol.quoted) return reply('The Message You Replied To Does Not Contain A Reply')
 
@@ -3682,7 +3682,7 @@ break
 
                  }
 
-                 iiuziBotInc.sendTextWithMentions(m.chat, teks, m)
+                 snoqxBotInc.sendTextWithMentions(m.chat, teks, m)
 
              }
 
@@ -3696,13 +3696,13 @@ break
 
                  for (let i of anu) {
 
-                     let metadata = await iiuziBotInc.groupMetadata(i)
+                     let metadata = await snoqxBotInc.groupMetadata(i)
 
                      teks += `🐕 *Name :* ${metadata.subject}\n🐕 *Owner :* @${metadata.owner.split('@')[0]}\n🐕 *ID :* ${metadata.id}\n🐕 *Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n🐕 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
 
                  }
 
-                 iiuziBotInc.sendTextWithMentions(m.chat, teks, m)
+                 snoqxBotInc.sendTextWithMentions(m.chat, teks, m)
 
              }
 
@@ -3714,7 +3714,7 @@ break
 
                     let online = [...Object.keys(store.presences[id]), botNumber]
 
-                    iiuziBotInc.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐈 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    snoqxBotInc.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐈 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
 
              }
 
@@ -3730,7 +3730,7 @@ break
 
                 let media = await quoted.download()
 
-                let encmedia = await iiuziBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+                let encmedia = await snoqxBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 
                 await fs.unlinkSync(encmedia)
 
@@ -3740,7 +3740,7 @@ break
 
                 let media = await quoted.download()
 
-                let encmedia = await iiuziBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+                let encmedia = await snoqxBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 
                 await fs.unlinkSync(encmedia)
 
@@ -3766,13 +3766,13 @@ if (!/image/.test(mime)) return reply(`Send/Reply Photo With Caption ${prefix + 
 
 reply(mess.wait)
 
-mee = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+mee = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
 mem = await TelegraPh(mee)
 
 meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
 
-memek = await iiuziBotInc.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
+memek = await snoqxBotInc.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
 
 await fs.unlinkSync(memek)
 
@@ -3822,7 +3822,7 @@ break
 
 		for (let res of anu.results) {
 
-		    let encmedia = await iiuziBotInc.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
+		    let encmedia = await snoqxBotInc.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
 
 		    await fs.unlinkSync(encmedia)
 
@@ -3840,7 +3840,7 @@ break
 
                 reply(mess.wait)
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
                 let ran = await getRandom('.png')
 
@@ -3852,7 +3852,7 @@ break
 
                     let buffer = fs.readFileSync(ran)
 
-                    iiuziBotInc.sendMessage(m.chat, { image: buffer }, { quoted: m })
+                    snoqxBotInc.sendMessage(m.chat, { image: buffer }, { quoted: m })
 
                     fs.unlinkSync(ran)
 
@@ -3872,11 +3872,11 @@ break
 
 		let { webp2mp4File } = require('./lib/uploader')
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
                 let webpToMp4 = await webp2mp4File(media)
 
-                await iiuziBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
+                await snoqxBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' } }, { quoted: m })
 
                 await fs.unlinkSync(media)
 
@@ -3898,7 +3898,7 @@ break
 
             let audio = await toAudio(media, 'mp4')
 
-            iiuziBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
+            snoqxBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
 
             }
 
@@ -3920,7 +3920,7 @@ break
 
             let audio = await toAudio(media, 'mp4')
 
-            iiuziBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Converted By ${iiuziBotInc.user.name}.mp3`}, { quoted : m })
+            snoqxBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Converted By ${snoqxBotInc.user.name}.mp3`}, { quoted : m })
 
             }
 
@@ -3940,7 +3940,7 @@ break
 
             let audio = await toPTT(media, 'mp4')
 
-            iiuziBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
+            snoqxBotInc.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
 
             }
 
@@ -3956,11 +3956,11 @@ break
 
 		let { webp2mp4File } = require('./lib/uploader')
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
                 let webpToMp4 = await webp2mp4File(media)
 
-                await iiuziBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
+                await snoqxBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
 
                 await fs.unlinkSync(media)
 
@@ -3974,7 +3974,7 @@ break
 
 		        let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
                 if (/image/.test(mime)) {
 
@@ -4012,7 +4012,7 @@ break
 
 	    hmm = await './src/remobg-'+getRandom('')
 
-	    localFile = await iiuziBotInc.downloadAndSaveMediaMessage(quoted, hmm)
+	    localFile = await snoqxBotInc.downloadAndSaveMediaMessage(quoted, hmm)
 
 	    outputFile = await './src/hremo-'+getRandom('.png')
 
@@ -4034,7 +4034,7 @@ break
 
 	    }).then(async result => {
 
-	    iiuziBotInc.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
+	    snoqxBotInc.sendMessage(m.chat, {image: fs.readFileSync(outputFile), caption: mess.success}, { quoted : m })
 
 	    await fs.unlinkSync(localFile)
 
@@ -4064,7 +4064,7 @@ break
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
 
             }
 
@@ -4126,7 +4126,7 @@ break
 
 🔗 *Media Url* : ${images}`,
 
-                    footer: iiuziBotInc.user.name,
+                    footer: snoqxBotInc.user.name,
 
                     buttons: buttons,
 
@@ -4134,7 +4134,7 @@ break
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
         })
 
@@ -4186,7 +4186,7 @@ break
 
 🐈 Url : ${anu.url}`,
 
-                    footer: iiuziBotInc.user.name,
+                    footer: snoqxBotInc.user.name,
 
                     buttons: buttons,
 
@@ -4194,7 +4194,7 @@ break
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4212,9 +4212,9 @@ break
 
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '320kbps'}`, m)
+                snoqxBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '320kbps'}`, m)
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 
             }
 
@@ -4232,7 +4232,7 @@ break
 
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${isUrl(text)}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
 
             }
 
@@ -4250,9 +4250,9 @@ break
 
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '128kbps'}`, m)
+                snoqxBotInc.sendImage(m.chat, media.thumb, `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '128kbps'}`, m)
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 
             }
 
@@ -4278,7 +4278,7 @@ break
 
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐈 Title : ${media.title}\n🐈 File Size : ${media.filesizeF}\n🐈 Url : ${urls[text - 1]}\n🐈 Ext : MP3\n🐈 Resolution : ${args[1] || '360p'}` }, { quoted: m })
 
             }
 
@@ -4294,7 +4294,7 @@ break
 
                 result = anu[Math.floor(Math.random() * anu.length)]
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: result }, caption: '🐈 Media Url : '+result }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: result }, caption: '🐈 Media Url : '+result }, { quoted: m })
 
             }
 
@@ -4306,7 +4306,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi.Webtoons(q).then(async data => {
+                snoqx.Webtoons(q).then(async data => {
 
                     let txt = `*------「 WEBTOONS-SEARCH 」------*\n\n`
 
@@ -4342,7 +4342,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi.Drakor(`${text}`).then(async data => {
+                snoqx.Drakor(`${text}`).then(async data => {
 
                     let txt = `*-----「 DRAKOR-SEARCH 」-----*\n\n`
 
@@ -4376,7 +4376,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi.Anime(q).then(async data => {
+                snoqx.Anime(q).then(async data => {
 
                     let txt = `*-------「 ANIME-SEARCH 」-------*\n\n`
 
@@ -4406,7 +4406,7 @@ case 'webtonsearch': case 'webtoon':
 
 				]
 
-				await iiuziBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
+				await snoqxBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
 
                 })
 
@@ -4426,7 +4426,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-                iiuzi.Character(q).then(async data => {
+                snoqx.Character(q).then(async data => {
 
                     let txt = `*---「 CHARACTER-SEARCH 」---*\n\n`
 
@@ -4456,7 +4456,7 @@ case 'webtonsearch': case 'webtoon':
 
 				]
 
-				await iiuziBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
+				await snoqxBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
 
                 })
 
@@ -4474,7 +4474,7 @@ case 'webtonsearch': case 'webtoon':
 
                 await reply(mess.wait)
 
-               iiuzi.Manga(`${text}`).then(async data => {
+               snoqx.Manga(`${text}`).then(async data => {
 
                     let txt = `*------「 MANGA-SEARCH 」------*\n\n`
 
@@ -4504,7 +4504,7 @@ case 'webtonsearch': case 'webtoon':
 
 				]
 
-				await iiuziBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
+				await snoqxBotInc.send5ButLoc(from, txt , `© ${ownername}`,gam, but , { userJid: m.chat, quoted: m })
 
                 })
 
@@ -4520,7 +4520,7 @@ case 'webtonsearch': case 'webtoon':
 
                 reply(mess.wait)
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
 
             }
 
@@ -4534,9 +4534,9 @@ case 'webtonsearch': case 'webtoon':
 
                 let random = anu[Math.floor(Math.random() * anu.length)]
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male🙎🏻‍♂️` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male🙎🏻‍♂️` }, { quoted: m })
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
 
             }
 
@@ -4556,7 +4556,7 @@ case 'webtonsearch': case 'webtoon':
 
                     caption: `☕ Random Coffee`,
 
-                    footer: iiuziBotInc.user.name,
+                    footer: snoqxBotInc.user.name,
 
                     buttons: buttons,
 
@@ -4564,7 +4564,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4592,7 +4592,7 @@ case 'webtonsearch': case 'webtoon':
 
                     caption: `🐈 Title : ${result.title}\n🐈 Category : ${result.type}\n🐈 Detail : ${result.source}\n🐈 Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
 
-                    footer: iiuziBotInc.user.name,
+                    footer: snoqxBotInc.user.name,
 
                     buttons: buttons,
 
@@ -4600,7 +4600,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4628,7 +4628,7 @@ case 'webtonsearch': case 'webtoon':
 
                     caption: `🐈 Title : ${result.title}\n🐈 Source : ${result.source}\n🐈 Media Url : ${result.image}`,
 
-                    footer: iiuziBotInc.user.name,
+                    footer: snoqxBotInc.user.name,
 
                     buttons: buttons,
 
@@ -4636,7 +4636,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4668,7 +4668,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4696,7 +4696,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -4704,11 +4704,11 @@ case 'webtonsearch': case 'webtoon':
 
             case '3dchristmas': case '3ddeepsea': case 'americanflag': case '3dscifi': case '3drainbow': case '3dwaterpipe': case 'halloweenskeleton': case 'sketch': case 'bluecircuit': case 'space': case 'metallic': case 'fiction': case 'greenhorror': case 'transformer': case 'berry': case 'thunder': case 'magma': case '3dcrackedstone': case '3dneonlight': case 'impressiveglitch': case 'naturalleaves': case 'fireworksparkle': case 'matrix': case 'dropwater':  case 'harrypotter': case 'foggywindow': case 'neondevils': case 'christmasholiday': case '3dgradient': case 'blackpink': case 'gluetext': {
 
-                if (!text) return reply(`Enter Text, Example : ${prefix + command} iiuzi`)
+                if (!text) return reply(`Enter Text, Example : ${prefix + command} snoqx`)
 
                 reply(mess.wait)
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: api('zenz', '/textpro/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
+                snoqxBotInc.sendMessage(m.chat, { image: { url: api('zenz', '/textpro/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
 
 	    }
 
@@ -4722,7 +4722,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Phone Number :* ${anu.message.nomer_hp}\n🐈 *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n🐈 *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n🐈 *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Phone Number :* ${anu.message.nomer_hp}\n🐈 *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n🐈 *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n🐈 *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
 
             }
 
@@ -4736,7 +4736,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Dream :* ${anu.message.mimpi}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Solution :* ${anu.message.solusi}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Dream :* ${anu.message.mimpi}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Solution :* ${anu.message.solusi}`, m)
 
             }
 
@@ -4752,7 +4752,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4768,7 +4768,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4784,7 +4784,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Husband's Name :* ${anu.message.suami.nama}\n🐈 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐈 *Wife's Name :* ${anu.message.istri.nama}\n🐈 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Husband's Name :* ${anu.message.suami.nama}\n🐈 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐈 *Wife's Name :* ${anu.message.istri.nama}\n🐈 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4800,7 +4800,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Your Name :* ${anu.message.nama_anda.nama}\n🐈 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐈 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐈 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4814,7 +4814,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4830,7 +4830,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Life Path :* ${anu.message.life_path}\n🐈 *Destiny :* ${anu.message.destiny}\n🐈 *Destiny Desire :* ${anu.message.destiny_desire}\n🐈 *Personality :* ${anu.message.personality}\n🐈 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Life Path :* ${anu.message.life_path}\n🐈 *Destiny :* ${anu.message.destiny}\n🐈 *Destiny Desire :* ${anu.message.destiny_desire}\n🐈 *Personality :* ${anu.message.personality}\n🐈 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
 
             }
 
@@ -4846,7 +4846,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendImage(m.chat,  anu.message.gambar, `🐈 *Your Name :* ${anu.message.nama_anda}\n🐈 *Couple Name :* ${anu.message.nama_pasangan}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}`, m)
+                snoqxBotInc.sendImage(m.chat,  anu.message.gambar, `🐈 *Your Name :* ${anu.message.nama_anda}\n🐈 *Couple Name :* ${anu.message.nama_pasangan}\n🐈 *Positive Side :* ${anu.message.sisi_positif}\n🐈 *Negative Side :* ${anu.message.sisi_negatif}`, m)
 
             }
 
@@ -4862,7 +4862,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Wedding Date :* ${anu.message.tanggal}\n🐈 *Characteristics :* ${anu.message.karakteristik}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Wedding Date :* ${anu.message.tanggal}\n🐈 *Characteristics :* ${anu.message.karakteristik}`, m)
 
             }
 
@@ -4878,7 +4878,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Business :* ${anu.message.usaha}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Business :* ${anu.message.usaha}`, m)
 
             }
 
@@ -4894,7 +4894,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Sustenance :* ${anu.message.rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Sustenance :* ${anu.message.rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4910,7 +4910,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Profession :* ${anu.message.pekerjaan}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.hari_lahir}\n🐈 *Profession :* ${anu.message.pekerjaan}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4926,7 +4926,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Root Number :* ${anu.message.angka_akar}\n🐈 *Nature :* ${anu.message.sifat}\n🐈 *Element :* ${anu.message.elemen}\n🐈 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Root Number :* ${anu.message.angka_akar}\n🐈 *Nature :* ${anu.message.sifat}\n🐈 *Element :* ${anu.message.elemen}\n🐈 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
 
             }
 
@@ -4942,7 +4942,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Analysis :* ${anu.message.analisa}\n🐈 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4958,7 +4958,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendImage(m.chat, anu.message.image, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendImage(m.chat, anu.message.image, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐈 *Meaning :* ${anu.message.arti}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -4974,7 +4974,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tahun_lahir}\n🐈 *Gender :* ${anu.message.jenis_kelamin}\n🐈 *Kua Number :* ${anu.message.angka_kua}\n🐈 *Group :* ${anu.message.kelompok}\n🐈 *Character :* ${anu.message.karakter}\n🐈 *Good Sector :* ${anu.message.sektor_baik}\n🐈 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tahun_lahir}\n🐈 *Gender :* ${anu.message.jenis_kelamin}\n🐈 *Kua Number :* ${anu.message.angka_kua}\n🐈 *Group :* ${anu.message.kelompok}\n🐈 *Character :* ${anu.message.karakter}\n🐈 *Good Sector :* ${anu.message.sektor_baik}\n🐈 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
 
             }
 
@@ -4990,7 +4990,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *When Challenged :* ${anu.message.kala_tinantang}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *When Challenged :* ${anu.message.kala_tinantang}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5006,7 +5006,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}\n🐈 *Info :* ${anu.message.info}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5022,7 +5022,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Fateful Day :* ${anu.message.hari_naas}\n🐈 *Info :* ${anu.message.catatan}\n🐈 *Notes :* ${anu.message.info}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Fateful Day :* ${anu.message.hari_naas}\n🐈 *Info :* ${anu.message.catatan}\n🐈 *Notes :* ${anu.message.info}`, m)
 
             }
 
@@ -5038,7 +5038,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5054,7 +5054,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Day Of Birth :* ${anu.message.hari_lahir}\n🐈 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐈 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5070,7 +5070,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5086,7 +5086,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tanggal}\n🐈 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐈 *Day Character :* ${anu.message.watak_hari}\n🐈 *Dragon Day :* ${anu.message.naga_hari}\n🐈 *Good Hour :* ${anu.message.jam_baik}\n🐈 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tanggal}\n🐈 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐈 *Day Character :* ${anu.message.watak_hari}\n🐈 *Dragon Day :* ${anu.message.naga_hari}\n🐈 *Good Hour :* ${anu.message.jam_baik}\n🐈 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
 
             }
 
@@ -5102,7 +5102,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Lifeline :* ${anu.message.garis_hidup}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Lifeline :* ${anu.message.garis_hidup}`, m)
 
             }
 
@@ -5118,7 +5118,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Name :* ${anu.message.nama}\n🐈 *Born :* ${anu.message.tgl_lahir}\n🐈 *Results :* ${anu.message.result}`, m)
 
             }
 
@@ -5134,7 +5134,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tgl_memancing}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Date :* ${anu.message.tgl_memancing}\n🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5150,7 +5150,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message.result}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5220,7 +5220,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Zodiac :* ${anu.message.zodiak}\n🐈 *Number :* ${anu.message.nomor_keberuntungan}\n🐈 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐈 *Planet :* ${anu.message.planet_yang_mengitari}\n🐈 *Flower :* ${anu.message.bunga_keberuntungan}\n🐈 *Color :* ${anu.message.warna_keberuntungan}\n🐈 *Stone :* ${anu.message.batu_keberuntungan}\n🐈 *Element :* ${anu.message.elemen_keberuntungan}\n🐈 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐈 *Notes :* ${anu.message.catatan}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Zodiac :* ${anu.message.zodiak}\n🐈 *Number :* ${anu.message.nomor_keberuntungan}\n🐈 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐈 *Planet :* ${anu.message.planet_yang_mengitari}\n🐈 *Flower :* ${anu.message.bunga_keberuntungan}\n🐈 *Color :* ${anu.message.warna_keberuntungan}\n🐈 *Stone :* ${anu.message.batu_keberuntungan}\n🐈 *Element :* ${anu.message.elemen_keberuntungan}\n🐈 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐈 *Notes :* ${anu.message.catatan}`, m)
 
             }
 
@@ -5234,7 +5234,7 @@ case 'webtonsearch': case 'webtoon':
 
                 if (anu.status == false) return reply(anu.message)
 
-                iiuziBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message}`, m)
+                snoqxBotInc.sendText(m.chat, `🐈 *Results :* ${anu.message}`, m)
 
             }
 
@@ -5312,13 +5312,13 @@ case 'webtonsearch': case 'webtoon':
 
                 } else if (type.toLowerCase() == 'ig') {
 
-                    if (!id) return reply(`No Query username, Example : ${prefix + command} ig josephiiuzi13`)
+                    if (!id) return reply(`No Query username, Example : ${prefix + command} ig josephsnoqx13`)
 
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
 
                     if (anu.status == false) return reply(anu.result.message)
 
-                    iiuziBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', `🐈 Full Name : ${anu.caption.full_name}\n🐈 User Name : ${anu.caption.user_name}\n🐈 ID ${anu.caption.user_id}\n🐈 Following : ${anu.caption.followers}\n🐈 Followers : ${anu.caption.following}\n🐈 Bussines : ${anu.caption.bussines}\n🐈 Professional : ${anu.caption.profesional}\n🐈 Verified : ${anu.caption.verified}\n🐈 Private : ${anu.caption.private}\n🐈 Bio : ${anu.caption.biography}\n🐈 Bio Url : ${anu.caption.bio_url}`, m)
+                    snoqxBotInc.sendMedia(m.chat, anu.caption.profile_hd, '', `🐈 Full Name : ${anu.caption.full_name}\n🐈 User Name : ${anu.caption.user_name}\n🐈 ID ${anu.caption.user_id}\n🐈 Following : ${anu.caption.followers}\n🐈 Followers : ${anu.caption.following}\n🐈 Bussines : ${anu.caption.bussines}\n🐈 Professional : ${anu.caption.profesional}\n🐈 Verified : ${anu.caption.verified}\n🐈 Private : ${anu.caption.private}\n🐈 Bio : ${anu.caption.biography}\n🐈 Bio Url : ${anu.caption.bio_url}`, m)
 
 		    db.data.users[m.sender].limit -= 1
 
@@ -5374,7 +5374,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -5410,7 +5410,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -5444,9 +5444,9 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                let msg = await iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                let msg = await snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
 
             }
 
@@ -5462,13 +5462,13 @@ case 'webtonsearch': case 'webtoon':
 
                     let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url: isUrl(text)[0] }, 'apikey'))
 
-                    for (let media of anu.data) iiuziBotInc.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
+                    for (let media of anu.data) snoqxBotInc.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
 
                 } else if (/\/stories\/([^\s&]+)/.test(isUrl(text)[0])) {
 
                     let anu = await fetchJson(api('zenz', '/downloader/instastory', { url: isUrl(text)[0] }, 'apikey'))
 
-                    iiuziBotInc.sendMedia(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
+                    snoqxBotInc.sendMedia(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
 
                 }
 
@@ -5488,7 +5488,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url:text }, 'apikey'))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: anu.data[0] } }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { video: { url: anu.data[0] } }, { quoted: m })
 
             }
 
@@ -5502,9 +5502,9 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
 
-                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.img, `🐈 Title : ${anu.result.lagu}\n🐈 Album : ${anu.result.album}\n🐈 Singer : ${anu.result.penyanyi}\n🐈 Publish : ${anu.result.publish}\n🐈 Lyrics :\n${anu.result.lirik.result}`, m)
+                let msg = await snoqxBotInc.sendImage(m.chat, anu.result.img, `🐈 Title : ${anu.result.lagu}\n🐈 Album : ${anu.result.album}\n🐈 Singer : ${anu.result.penyanyi}\n🐈 Publish : ${anu.result.publish}\n🐈 Lyrics :\n${anu.result.lirik.result}`, m)
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
 
             }
 
@@ -5518,9 +5518,9 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
 
-                let msg = await iiuziBotInc.sendImage(m.chat, anu.result.thumb, `🐈 Title : ${anu.result.title}\n🐈 Url : ${isUrl(text)[0]}`)
+                let msg = await snoqxBotInc.sendImage(m.chat, anu.result.thumb, `🐈 Title : ${anu.result.title}\n🐈 Url : ${isUrl(text)[0]}`)
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
 
             }
 
@@ -5554,7 +5554,7 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
             }
 
@@ -5588,9 +5588,9 @@ case 'webtonsearch': case 'webtoon':
 
                 }
 
-                let msg = await iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+                let msg = await snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
-                iiuziBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
+                snoqxBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
 
             }
 
@@ -5604,7 +5604,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐈 Title : ${anu.result.title}`}, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐈 Title : ${anu.result.title}`}, { quoted: m })
 
             }
 
@@ -5618,7 +5618,7 @@ case 'webtonsearch': case 'webtoon':
 
                 let anu = await fetchJson(api('zenz', '/api/downloader/pinterestdl', { url: text }, 'apikey'))
 
-                iiuziBotInc.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
 
             }
 
@@ -5662,7 +5662,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 `,
 
-			footer: iiuziBotInc.user.name,
+			footer: snoqxBotInc.user.name,
 
 			buttons,
 
@@ -5670,13 +5670,13 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 		    }
 
-		    iiuziBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+		    snoqxBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
 		} else if (anu.type == 'image') {
 
 		    anu.media.map(async (url) => {
 
-		        iiuziBotInc.sendMessage(m.chat, { image: { url }, caption: `🐈 Title : ${anu.title}\n🐈 Author : ${anu.author.name}\n🐈 Like : ${anu.like}\n🐈 Caption : ${anu.caption}` }, { quoted: m })
+		        snoqxBotInc.sendMessage(m.chat, { image: { url }, caption: `🐈 Title : ${anu.title}\n🐈 Author : ${anu.author.name}\n🐈 Like : ${anu.like}\n🐈 Caption : ${anu.caption}` }, { quoted: m })
 
 		    })
 
@@ -5696,7 +5696,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 		let result = anu[Math.floor(Math.random() * anu.length)]
 
-		iiuziBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
+		snoqxBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 
 	    }
 
@@ -5710,7 +5710,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 		yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
 
-		iiuziBotInc.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
+		snoqxBotInc.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 
 		}
 
@@ -5722,25 +5722,25 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 		reply(mess.wait)
 
-		iiuziBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
+		snoqxBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
 
 		} else if (args[0] === 'docx') {
 
 		reply(mess.wait)
 
-		iiuziBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
+		snoqxBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
 
 		} else if (args[0] === 'pptx') {
 
 		reply(mess.wait)
 
-		iiuziBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
+		snoqxBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
 
 		} else if (args[0] === 'xlsx') {
 
 		reply(mess.wait)
 
-		iiuziBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
+		snoqxBotInc.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
 
 		} else {
 
@@ -5848,7 +5848,7 @@ ${id}`)
 
 		reply(txt)
 
-		iiuziBotInc.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
+		snoqxBotInc.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
 
 		}
 
@@ -5916,7 +5916,7 @@ ${id}`)
 
                 reply(mess.wait)
 
-                let media = await iiuziBotInc.downloadAndSaveMediaMessage(quoted)
+                let media = await snoqxBotInc.downloadAndSaveMediaMessage(quoted)
 
                 let ran = getRandom('.mp3')
 
@@ -5928,7 +5928,7 @@ ${id}`)
 
                 let buff = fs.readFileSync(ran)
 
-                iiuziBotInc.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
+                snoqxBotInc.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
 
                 fs.unlinkSync(ran)
 
@@ -6004,7 +6004,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 
 `.trim()
 
-                iiuziBotInc.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
+                snoqxBotInc.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
 
             }
 
@@ -6064,7 +6064,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
 
-                iiuziBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
+                snoqxBotInc.copyNForward(m.chat, msgs[text.toLowerCase()], true)
 
             }
 
@@ -6116,7 +6116,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 ]
 
-                iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await iiuziBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, iiuziBotInc.user.name, m)
+                snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await snoqxBotInc.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, snoqxBotInc.user.name, m)
 
             }
 
@@ -6138,7 +6138,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
 
                    reply(false)
 
@@ -6148,7 +6148,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 let other = room.other(m.sender)
 
-                if (other) await iiuziBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                if (other) await snoqxBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
 
                 delete this.anonymous[room.id]
 
@@ -6170,7 +6170,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, snoqxBotInc.user.name, m)
 
                     reply(false)
 
@@ -6188,13 +6188,13 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, snoqxBotInc.user.name, m)
 
                     room.b = m.sender
 
                     room.state = 'CHATTING'
 
-                    await iiuziBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, snoqxBotInc.user.name, m)
 
                 } else {
 
@@ -6230,7 +6230,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, snoqxBotInc.user.name, m)
 
                 }
 
@@ -6254,7 +6254,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
 
                     reply(false)
 
@@ -6262,7 +6262,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 let other = romeo.other(m.sender)
 
-                if (other) await iiuziBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
+                if (other) await snoqxBotInc.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
 
                 delete this.anonymous[romeo.id]
 
@@ -6278,13 +6278,13 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, snoqxBotInc.user.name, m)
 
                     room.b = m.sender
 
                     room.state = 'CHATTING'
 
-                    await iiuziBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, snoqxBotInc.user.name, m)
 
                 } else {
 
@@ -6320,7 +6320,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                     ]
 
-                    await iiuziBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, iiuziBotInc.user.name, m)
+                    await snoqxBotInc.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, snoqxBotInc.user.name, m)
 
                 }
 
@@ -6332,7 +6332,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 if (!isCreator) return replay(`${mess.owner}`)
 
-                iiuziBotInc.public = true
+                snoqxBotInc.public = true
 
                 reply('Successful Change To Public Usage')
 
@@ -6344,7 +6344,7 @@ View List Of Messages With ${prefix}listmsg`)
 
                 if (!isCreator) return replay(`${mess.owner}`)
 
-                iiuziBotInc.public = false
+                snoqxBotInc.public = false
 
                 reply('Successful Change To Self Usage')
 
@@ -6482,7 +6482,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 
             case 'owner': case 'creator': {
 
-                iiuziBotInc.sendContact(m.chat, global.owner, m)
+                snoqxBotInc.sendContact(m.chat, global.owner, m)
 
             }
 
@@ -6496,7 +6496,7 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 
 					.then(({data}) => {
 
-						iiuziBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+						snoqxBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 
 					})
 
@@ -6510,7 +6510,7 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 
 					.then(({data}) => {
 
-					iiuziBotInc.sendImage(m.chat, data.url, mess.success, m)
+					snoqxBotInc.sendImage(m.chat, data.url, mess.success, m)
 
 					})
 
@@ -6546,7 +6546,7 @@ break
 
                     	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
 
-                    	iiuziBotInc.sendMessage(`918590451659@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+                    	snoqxBotInc.sendMessage(`918590451659@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 
 Report Message: ${text}` })
 
@@ -6670,7 +6670,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 
                 }), { userJid: m.chat })
 
-                iiuziBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                snoqxBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
 
                 }
 
@@ -6790,7 +6790,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 
                 }), { userJid: m.chat })
 
-                iiuziBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                snoqxBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
 
                 }
 
@@ -7030,7 +7030,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 
             }), {})
 
-            iiuziBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            snoqxBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
 
             }
 
@@ -7038,7 +7038,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
 
-                iiuziBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/453c6f2163fcd32113093.jpg' }, caption: `*Hi Bro ${m.pushName}*\n\nDonate Me : \n\n🐈 YouTube : https://youtu.be/Nhjw12ODzKI\n🐈 GitHub : https://github.com/iiuzi-x0\n\nIf You Want To Donate, Talk With The Owner First\nwa.me/918590451659 (Click To Contact)` }, { quoted: m })
+                snoqxBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/453c6f2163fcd32113093.jpg' }, caption: `*Hi Bro ${m.pushName}*\n\nDonate Me : \n\n🐈 YouTube : https://youtu.be/Nhjw12ODzKI\n🐈 GitHub : https://github.com/snoqx\n\nIf You Want To Donate, Talk With The Owner First\nwa.me/918590451659 (Click To Contact)` }, { quoted: m })
 
             }
 
@@ -7046,7 +7046,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 
             case 'sc': case 'script': {
 
-                reply(`GitHub : https://github.com/iiuzi-x0/Minx-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
+                reply(`GitHub : https://github.com/snoqx/Minx-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
 
             }
 
@@ -7554,7 +7554,7 @@ case 'allmenu': {
 
                 }), { userJid: m.chat })
 
-                iiuziBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                snoqxBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
 
             }
 
@@ -7564,7 +7564,7 @@ case 'mainmenu':
 
 var unicorn = await getBuffer(picak+'Main Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7608,7 +7608,7 @@ case 'grupmenu': case 'groupmenu':
 
 var unicorn = await getBuffer(picak+'Group Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7666,7 +7666,7 @@ case 'rpgmenu':
 
 var unicorn = await getBuffer(picak+'Rpg Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7702,7 +7702,7 @@ case 'funmenu':
 
 var unicorn = await getBuffer(picak+'Fun Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7808,7 +7808,7 @@ case 'ownermenu':
 
 var unicorn = await getBuffer(picak+'Owner Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7864,7 +7864,7 @@ case 'downloadmenu':
 
 var unicorn = await getBuffer(picak+'Downloader Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7894,7 +7894,7 @@ case 'searchmenu':
 
 var unicorn = await getBuffer(picak+'Search Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7932,7 +7932,7 @@ case 'randommenu':
 
 var unicorn = await getBuffer(picak+'Random Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -7954,7 +7954,7 @@ case 'randomanimemenu':
 
 var unicorn = await getBuffer(picak+'Random Anime Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8024,7 +8024,7 @@ case 'textpromenu':
 
 var unicorn = await getBuffer(picak+'Text Pro Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8102,7 +8102,7 @@ case 'convertmenu':
 
 var unicorn = await getBuffer(picak+'Converter Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8140,7 +8140,7 @@ case 'databasemenu':
 
 var unicorn = await getBuffer(picak+'Database Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8172,7 +8172,7 @@ case 'databasemenu':
 
 var unicorn = await getBuffer(picak+'Database Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8196,7 +8196,7 @@ case 'islamicmenu':
 
 var unicorn = await getBuffer(picak+'Islamic Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8214,7 +8214,7 @@ case 'voicechangermenu':
 
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8252,7 +8252,7 @@ case 'horoscopemenu':
 
 var unicorn = await getBuffer(picak+'Horoscope Menu')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 ┏━「 ${botname} 」━━⭓ 
 
@@ -8328,13 +8328,13 @@ case 'thanksto': case 'tqto': case 'tqtt':
 
 var unicorn = await getBuffer(picak+'Developer')
 
-await iiuziBotInc.send5ButImg(from, `` + '' + ' ', `
+await snoqxBotInc.send5ButImg(from, `` + '' + ' ', `
 
 Thanks to
 
 LORD BUDDHA
 
-iiuzi (Me)
+snoqx (Me)
 
 My family
 
@@ -8464,7 +8464,7 @@ break
 
 		    if (!(budy.toLowerCase() in msgs)) return
 
-		    iiuziBotInc.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+		    snoqxBotInc.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 
 		}
 
